@@ -1,0 +1,31 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+.appContainer {
+  display: flex;
+  flex-direction: row;
+}
+
+.appContainer > div:nth-child(1) {
+  width: 20%;
+  position: fixed;
+  z-index: 100;
+}
+.appContainer > div:nth-child(2) {
+  width: 75%;
+  position: absolute;
+  height: fit-content;
+  margin-left: 20%;
+  margin-top: 60px;
+}
+
+@media screen and (max-width: 768px) {
+  .appContainer > div:nth-child(1) {
+    width: 250px;
+    position: fixed;
+    z-index: 100;
+    padding-bottom: 30px;
+  }
+}
