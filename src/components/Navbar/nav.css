@@ -17,6 +17,7 @@
   background-color: var(--background-color);
   position: fixed !important;
   width: 99%;
+  /* height: 70px; */
   padding: 0 30px !important;
   z-index: 1000;
 }
@@ -24,6 +25,7 @@
 .navbar__logo {
   font-size: 24px;
   color: var(--text-color);
+  color: white !important;
 }
 
 .navbar__logo i {
@@ -95,4 +97,65 @@
   .navbar__icons.navactive {
     display: flex;
   }
+}
+
+.navbar-toggler-icon {
+  
+  display: inline-block;
+  width: 1.5em;
+   height: 1.5em; 
+   vertical-align: middle; 
+   background-image:none; 
+   /* background-repeat: no-repeat;  */
+   background-position: center; 
+   background-size: 100%; 
+
+   color: white;
+}
+
+/* ..................................... */
+*{
+  margin:0px;
+  padding:0px;
+  box-sizing: border-box;
+}
+.navbar{
+  background-color:#263343;
+  ;
+}
+.navbar-brand{
+  color:white;
+  font-weight: bold;
+}
+.nav-item .nav-link{
+  color: white;
+  font-weight: bold;
+  margin-right: 15px;
+}
+
+
+.navbar-toggler {
+    padding: 0.1rem 0.75rem !important;
+    font-size: var(--bs-navbar-toggler-font-size);
+    line-height: 1;
+    color:red;
+    background-color: rgb(243, 243, 239) !important;
+    border:none !important;
+    /* border-radius: var(--bs-navbar-toggler-border-radius); */
+    transition: var(--bs-navbar-toggler-transition);
+}
+.navbar-toggler:focus {
+  text-decoration: none;
+  outline: 0;
+  /* box-shadow: red; */
+}
+
+
+#navbarSupportedContent ul li a{
+color: white !important;
+}
+
+#navbarSupportedContent ul li :hover{
+  /* background-color: #adaba9 !important; */
+  color: rgb(251, 199, 103) !important;
 }

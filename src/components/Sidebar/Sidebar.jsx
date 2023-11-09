@@ -35,9 +35,10 @@ const style = {
   transform: "translate(-50%, -50%)",
   width: 400,
   bgcolor: "background.paper",
-  border: "1px solid white",
+  // border: "1px solid white",
   boxShadow: 24,
   p: 4,
+  border:"1px solid red",
 };
 
 const Sidebar = ({ children }) => {
@@ -141,7 +142,7 @@ const Sidebar = ({ children }) => {
               <HelpIcon />
             </div>
             <div
-              style={{ display: !matches ? "block" : "none" }}
+              style={{ display: !sideBar ? "block" : "none" }}
               className="link_text"
             >
               Feedbacks & Suggestions
@@ -163,6 +164,7 @@ const Sidebar = ({ children }) => {
             variant="h5"
             component="h1"
             sx={{ paddingBottom: 1 }}
+           
           >
             Feedbacks & Suggestions
           </Typography>

@@ -9,7 +9,6 @@ export const Video = () => {
             <div class="m-b-10">
               <b>Videos (15)</b>
             </div>
-
             <div class="row row-space-2">
               <div class="col-sm-8">
                 <div class="embed-responsive embed-responsive-16by9 m-b-2">
@@ -19,7 +18,6 @@ export const Video = () => {
                   ></iframe>
                 </div>
               </div>
-
               <div class="col-sm-4">
                 <div class="embed-responsive embed-responsive-16by9 m-b-2">
                   <iframe
@@ -35,7 +33,6 @@ export const Video = () => {
                 </div>
               </div>
             </div>
-
             <div class="row row-space-2">
               <div class="col-sm-4">
                 <div class="embed-responsive embed-responsive-16by9 m-b-2">
@@ -45,7 +42,6 @@ export const Video = () => {
                   ></iframe>
                 </div>
               </div>
-
               <div class="col-sm-4">
                 <div class="embed-responsive embed-responsive-16by9 m-b-2">
                   <iframe
@@ -54,7 +50,6 @@ export const Video = () => {
                   ></iframe>
                 </div>
               </div>
-
               <div class="col-sm-4">
                 <div class="embed-responsive embed-responsive-16by9 m-b-2">
                   <iframe
@@ -64,7 +59,6 @@ export const Video = () => {
                 </div>
               </div>
             </div>
-
             <div class="row row-space-2">
               <div class="col-sm-4">
                 <div class="embed-responsive embed-responsive-16by9 m-b-2">
@@ -83,7 +77,6 @@ export const Video = () => {
                   ></iframe>
                 </div>
               </div>
-
               <div class="col-sm-4">
                 <div class="embed-responsive embed-responsive-16by9 m-b-2">
                   <iframe
@@ -93,7 +86,7 @@ export const Video = () => {
                 </div>
               </div>
             </div>
-
+ 
             <div class="row row-space-2">
               <div class="col-sm-4">
                 <div class="embed-responsive embed-responsive-16by9 m-b-2">
@@ -103,7 +96,6 @@ export const Video = () => {
                   ></iframe>
                 </div>
               </div>
-
               <div class="col-sm-4">
                 <div class="embed-responsive embed-responsive-16by9 m-b-2">
                   <iframe
@@ -112,7 +104,6 @@ export const Video = () => {
                   ></iframe>
                 </div>
               </div>
-
               <div class="col-sm-4">
                 <div class="embed-responsive embed-responsive-16by9 m-b-2">
                   <iframe
@@ -122,7 +113,6 @@ export const Video = () => {
                 </div>
               </div>
             </div>
-
             <div class="row row-space-2">
               <div class="col-sm-4">
                 <div class="embed-responsive embed-responsive-16by9 m-b-2">
@@ -155,7 +145,7 @@ export const Video = () => {
         </div>
       </div>
 
-      <div class="col-md-4 hidden-xs hidden-sm">
+      {/* <div class="col-md-4 hidden-xs hidden-sm">
         <ul class="profile-info-list">
           <li class="title">PERSONAL INFORMATION</li>
           <li>
@@ -251,70 +241,7 @@ export const Video = () => {
             </a>
           </li>
         </ul>
-      </div>
+      </div> */}
     </div>
   );
 };
-
-// import { useState } from "react";
-// import { Link } from "react-router-dom";
-// import "./profile.css";
-// import { FriendsList } from "./FriendsList.js";
-// import { Video } from "./Video.js";
-
-// // import "./FriendsList.js";
-// export const Profile = () => {
-//   const [proValue, setProValue] = useState("false");
-//   return (
-//     <div class="container">
-//       <div id="content" class="content p-0">
-//         <div class="profile-header">
-//           <div class="profile-header-cover"></div>
-//           <div class="profile-header-content">
-//             <div class="profile-header-img">
-//               <img
-//                 src="https://bootdey.com/img/Content/avatar/avatar6.png"
-//                 alt=""
-//               />
-//             </div>
-//             <div class="profile-header-info">
-//               <h4 class="m-t-sm">John Doe</h4>
-//               <p class="m-b-sm">UXUI + Frontend Developer</p>
-//               <a href="#" class="btn btn-xs btn-info mb-4">
-//                 Edit Profile
-//               </a>
-//             </div>
-//           </div>
-//           <ul class="profile-header-tab nav nav-tabs">
-//             <li class="nav-item">
-//               <a class="nav-link_">POSTS</a>
-//             </li>
-//             <li class="nav-item">
-//               <a class="nav-link_">ABOUT</a>
-//             </li>
-//             <li class="nav-item">
-//               <a class="nav-link_">PHOTOS</a>
-//             </li>
-//             <li class="nav-item">
-//               <a class="nav-link_">VIDEOS</a>
-//             </li>
-//             <li class="nav-item">
-//               <a
-//                 to=""
-//                 // href="https://www.bootdey.com/snippets/view/bs4-profile-friend-list"
-//                 // target="__blank"
-//                 class="nav-link_ active show"
-//               >
-//                 FRIENDS
-//               </a>
-//             </li>
-//           </ul>
-//         </div>
-//         <div class="profile-container">
-//           {/* <FriendsList /> */}
-//           {/* <Video/> */}
-//         </div>
-//       </div>
-//     </div>
-//   );
-// };

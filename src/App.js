@@ -3,6 +3,8 @@ import "./App.css";
 import Sidebar from "./components/Sidebar/Sidebar";
 import { AllRoute } from "./Route/AllRoute";
 import { Navbar } from "./components/Navbar/Navbar";
+import { ExtraFileNav } from "./components/Navbar/ExtraFileNav";
+// import ExtraFileNav from "./components/Navbar/ExtraFileNav";
 const App = () => {
 
   // const [counter, setCounter] = useState(0);
@@ -21,6 +23,9 @@ const App = () => {
   return (
     <>
       <Navbar />
+
+{/* <ExtraFileNav/> */}
+
       <div className="appContainer">
         <div>
           <Sidebar />

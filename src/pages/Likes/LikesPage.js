@@ -43,7 +43,6 @@ export const LikesPage = () => {
           </div>
         </div>
         <div className="container">
-          <h1>fkjbvfbv hf</h1>
           <SearchPageData data={dummyData} />
           {/* {searchPage ? <PeopleNearBy /> : <Popular />} */}
         </div>
@@ -52,12 +51,4 @@ export const LikesPage = () => {
       {/* .............................show data......................... */}
     </>
   );
-};
-
-
-
-//  bttomdrawer
-//  cards :-  image . text + 
-//  banner  color -blue +  white text .
-//  small cards :-  image ,text 
-
+};  

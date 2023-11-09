@@ -9,6 +9,7 @@ import { common } from "@mui/material/colors";
 import { SearchPageData } from "./SearchPageData";
 
 export const MeetNewFnd = () => {
+
   const [searchPage, setSearchPage] = useState(true);
   const [nearbyPage, setNearByPage] = useState(false);
   const [dummyData, setDummyDate] = useState(Data);
@@ -25,7 +26,9 @@ export const MeetNewFnd = () => {
 
   console.log("search page data by next page move", searchData)
 
-  useEffect(() => { }, []);
+  useEffect(() => { 
+    console.log("data")
+  }, []);
   // console.log("dummy data", dummyData);
   return (
     <>
@@ -46,7 +49,7 @@ export const MeetNewFnd = () => {
           </div>
         </div>
         <div className="container">
-          {searchPage ? <SelectFields data={dummyData} setSearchData={setSearchData} /> : <NearBy />}
+          {searchPage ? <SelectFields data={dummyData} setSearchData={setSearchData} /> : <NearBy  data={dummyData} setSearchData={setSearchData}/>}
         </div>
       </div>
 

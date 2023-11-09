@@ -1,31 +1,45 @@
 import React, { useEffect, useState } from "react";
 import CountrySelect from "react-bootstrap-country-select";
 import Switch from "@mui/material/Switch";
+// import Switch from '@material-ui/core/Switch';
 import { FormControlLabel } from "@mui/material";
 export const SelectFields = ({ data, setSearchData }) => {
   // console.log("search page", data);
   const [value, setValue] = React.useState(null);
-  const [age, setAge] = useState("");
+  const [age, setAge] = useState(25);
   const [gender, setGender] = useState([]);
-  const label = { inputProps: { "aria-label": "Switch demo" } };
+  // const label = { inputProps: { "aria-label": "Switch demo" } };
   var filterValue;
 
-  useEffect(() => {
-
-    console.log("data form useEffect", data)
-    if (gender  == "Female" ) {
-      console.log("gender", gender)
-      filterValue = data.filter(person => person.gender == gender  );
+  const [checked, setChecked] = useState(false);
+  const handleChange = (event) => {
+    if (event.target.checked) {
+      setChecked(event.target.checked);
+      console.log("data  yes");
+      filterValue = data.filter(
+        (person) => person.age > age - 5 && person.age <= age + 5
+      );
       setSearchData(filterValue);
+    } else {
+      setChecked("");
+      setSearchData(data);
+      console.log("no data found");
     }
-    else if (gender.value === "Both") {
+  };
+
+  useEffect(() => {
+    console.log("data form useEffect", data);
+    if (gender == "Female") {
+      console.log("gender", gender);
+      filterValue = data.filter((person) => person.gender == gender);
+      setSearchData(filterValue);
+    } else if (gender == "Male") {
+      filterValue = data.filter((person) => person.gender == gender);
+      setSearchData(filterValue);
+    } else if (gender.value === "Both") {
       console.log("both", data);
       setSearchData(data);
-    }
-    else if (age) {
-      filterValue = data.filter(person => person.age > age - 5 && person.age <= age + 5)
-    }
-    else {
+    } else {
       setSearchData(data);
     }
     // setSearchData(filterValue);
@@ -67,19 +81,24 @@ export const SelectFields = ({ data, setSearchData }) => {
       <div class="custom-control custom-switch text-md-right text-sm-left">
         <FormControlLabel
           required
-
           // checked={values.age}
           // onChange={()=>setAge(10)}
           // onBlur={handleBlur}
-          control={<Switch
-          // checked={values.age} 
-          />}
+          control={
+            <Switch
+            checked={checked}
+            onChange={handleChange}
+            inputProps={{ "aria-label": "controlled" }}
+          />
+          }
           label={
             <span class="text-size  text-sm-left" style={{ fontSize: ".9rem" }}>
               NEAR MY AGE
             </span>
           }
         />
+
+       
       </div>
     </div>
   );

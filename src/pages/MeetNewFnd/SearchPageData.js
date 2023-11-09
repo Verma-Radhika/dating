@@ -1,171 +1,39 @@
+import { Hidden } from "@mui/material";
 import React from "react";
+import { Link } from "react-router-dom";
 
 export const SearchPageData = ({ data }) => {
   // console.log("data", data);
   return (
     <div class="container cardContainer py-5">
       <div class="row pb-5 mb-4">
-        {data?.map((el) => (
-          <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+        {data?.map((el,index) => (
+          
+          <div class="col-lg-3 col-md-6 mb-4 mb-lg-0 " key={index}>
             <div
-              class="card shadow-sm border  border-1 rounded-0"
-              style={{ marginTop: "20px" }}
+              class="card shadow-sm border  border-1 rounded-0 h-10"
+              style={{ marginTop: "20px" , border:"1px solid red"}}
             >
+               <Link to={`/profile/${el.id}`}>
               <div class="card-body p-0">
-                <img
+                <div style={{height:"35vh"}}>
+                <img 
                   // src="https://bootstrapious.com/i/snippets/sn-cards/profile-1_dewapk.jpg"
                   src={el.image}
                   alt=""
                   class="w-100 card-img-top"
+                  style={{height:"100%",width:"70%"}}
                 />
+                </div>
                 <div class="p-2" style={{ borderTop: "1px solid #e5e5e5" }}>
-                  {/* <h5 class="mb-0">{el.name}</h5> */}
                   <p class="small ">{el.name}</p>
-                  {/* <ul class="social mb-0 list-inline mt-3">
-                    <li class="list-inline-item m-0">
-                      <a href="#" class="social-link">
-                        <i class="fa fa-facebook-f"></i>
-                      </a>
-                    </li>
-                    <li class="list-inline-item m-0">
-                      <a href="#" class="social-link">
-                        <i class="fa fa-twitter"></i>
-                      </a>
-                    </li>
-                    <li class="list-inline-item m-0">
-                      <a href="#" class="social-link">
-                        <i class="fa fa-instagram"></i>
-                      </a>
-                    </li>
-                    <li class="list-inline-item m-0">
-                      <a href="#" class="social-link">
-                        <i class="fa fa-linkedin"></i>
-                      </a>
-                    </li>
-                  </ul> */}
                 </div>
               </div>
+              </Link>
             </div>
           </div>
         ))}
-
-        <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
-          <div class="card shadow-sm border-0 rounded">
-            <div class="card-body p-0">
-              <img
-                src="https://bootstrapious.com/i/snippets/sn-cards/profile-3_ybnq8v.jpg"
-                alt=""
-                class="w-100 card-img-top"
-              />
-              <div class="p-4">
-                <h5 class="mb-0">Mark Rockwell</h5>
-                <p class="small text-muted">CEO - Consultant</p>
-                <ul class="social mb-0 list-inline mt-3">
-                  <li class="list-inline-item m-0">
-                    <a href="#" class="social-link">
-                      <i class="fa fa-facebook-f"></i>
-                    </a>
-                  </li>
-                  <li class="list-inline-item m-0">
-                    <a href="#" class="social-link">
-                      <i class="fa fa-twitter"></i>
-                    </a>
-                  </li>
-                  <li class="list-inline-item m-0">
-                    <a href="#" class="social-link">
-                      <i class="fa fa-instagram"></i>
-                    </a>
-                  </li>
-                  <li class="list-inline-item m-0">
-                    <a href="#" class="social-link">
-                      <i class="fa fa-linkedin"></i>
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
-          <div class="card shadow-sm border-0 rounded">
-            <div class="card-body p-0">
-              <img
-                src="https://bootstrapious.com/i/snippets/sn-cards/profile-2_ujssbj.jpg"
-                alt=""
-                class="w-100 card-img-top"
-              />
-              <div class="p-4">
-                <h5 class="mb-0">Mark Rockwell</h5>
-                <p class="small text-muted">CEO - Consultant</p>
-                <ul class="social mb-0 list-inline mt-3">
-                  <li class="list-inline-item m-0">
-                    <a href="#" class="social-link">
-                      <i class="fa fa-facebook-f"></i>
-                    </a>
-                  </li>
-                  <li class="list-inline-item m-0">
-                    <a href="#" class="social-link">
-                      <i class="fa fa-twitter"></i>
-                    </a>
-                  </li>
-                  <li class="list-inline-item m-0">
-                    <a href="#" class="social-link">
-                      <i class="fa fa-instagram"></i>
-                    </a>
-                  </li>
-                  <li class="list-inline-item m-0">
-                    <a href="#" class="social-link">
-                      <i class="fa fa-linkedin"></i>
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
-          <div class="card shadow-sm border-0 rounded">
-            <div class="card-body p-0">
-              <img
-                src="https://res.cloudinary.com/mhmd/image/upload/v1570799922/profile-2_ujssbj.jpg"
-                alt=""
-                class="w-100 card-img-top"
-              />
-              <div class="p-4">
-                <h5 class="mb-0">Mark Rockwell</h5>
-                <p class="small text-muted">CEO - Consultant</p>
-                <ul class="social mb-0 list-inline mt-3">
-                  <li class="list-inline-item m-0">
-                    <a href="#" class="social-link">
-                      <i class="fa fa-facebook-f"></i>
-                    </a>
-                  </li>
-                  <li class="list-inline-item m-0">
-                    <a href="#" class="social-link">
-                      <i class="fa fa-twitter"></i>
-                    </a>
-                  </li>
-                  <li class="list-inline-item m-0">
-                    <a href="#" class="social-link">
-                      <i class="fa fa-instagram"></i>
-                    </a>
-                  </li>
-                  <li class="list-inline-item m-0">
-                    <a href="#" class="social-link">
-                      <i class="fa fa-linkedin"></i>
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-
-
-
-        
+   
       </div>
     </div>
   );

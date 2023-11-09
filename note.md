@@ -41,3 +41,19 @@ there are three option ? again login ? or may be see profile
   - swiper :- left [remove]   right [save]
   - navbar 
   - favorite [star mark]
+
+
+
+  * Problem:- 
+   - Cards :- 
+    - not fixed height
+    - ui / logic problem in switch button 
+    -
+
+ * Today work 
+  - fixe buge in filter 
+  - connect with 
+
+
+
+  <!-- https://mdbootstrap.com/docs/standard/navigation/navbar/ -->

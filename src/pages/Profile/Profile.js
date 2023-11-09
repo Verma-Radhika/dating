@@ -6,46 +6,68 @@ import { FriendsList } from "./FriendsList.js";
 import { About } from "./About.js";
 import { Photos } from "./Photos";
 import { Post } from "./Post";
-
+import { useParams } from "react-router-dom";
+import { Data } from "../../db.js";
+import AddAPhotoOutlinedIcon from '@mui/icons-material/AddAPhotoOutlined';
 export const Profile = () => {
   const [proValue, setProValue] = useState(1);
-
-
+  const { id } = useParams(); 
+  console.log("id", id);
+  const [item, setItem] = useState(null);
 
   useEffect(() => {
-
-  }, []);
-  console.log("value", proValue);
+    const selectedItem = Data.find((item) => item.id === id);
+    console.log("select Item", selectedItem);
+    if (selectedItem) {
+      setItem(selectedItem);
+    } else {
+      console.error(`Item with ID ${id} not found.`);
+    }
+  }, [id]);
+  
   return (
-    <div class="container mt-2">
+    <div class="container mt-1">
       <div id="content" class="content p-0">
         <div class="profile-header">
-          <div class="profile-header-cover"></div>
+          <div class="profile-header-cover"> </div>
           <div class="profile-header-content">
             <div class="profile-header-img">
               <img
-                src="https://bootdey.com/img/Content/avatar/avatar6.png"
+                src={`${item?.image}`}
                 alt=""
+                style={{width:"100%" , height:"100%"}}
               />
+              <AddAPhotoOutlinedIcon/>
             </div>
-            <div class="profile-header-info">
-              <h4 class="m-t-sm">John Doe</h4>
+            <div class="profile-header-info col-6">
+              <h4 class="m-t-sm">{ item?.name}</h4>
               <p class="m-b-sm">UXUI + Frontend Developer</p>
-              <a href="#" class="btn btn-xs btn-info mb-4">
-                Edit Profile
-              </a>
+              <div className="" style={{display:"flex"}}>
+              <p>0</p>
+                <p style={{marginLeft:"80px"}}>0</p>
+              </div>
+              <div style={{display:"flex"}}>
+              <p>Like</p>
+                <p style={{marginLeft:"30px"}}>Friends</p>
+              </div>
+
+              {/* Icon space ..  To change profile image and bgimage */}
+              
             </div>
           </div>
           <ul class="profile-header-tab nav nav-tabs">
             <li class="nav-item">
-              <a class={`nav-link_ ${proValue==1 ? "active show":""}`} onClick={() => setProValue(1)}>
+              <a
+                class={`nav-link_ ${proValue == 1 ? "active show" : ""}`}
+                onClick={() => setProValue(1)}
+              >
                 POSTS
               </a>
             </li>
             <li class="nav-item">
               <a
                 class={`nav-link_ ${proValue == 2 ? "active show" : ""}`}
-                onClick={() => setProValue(2  )}
+                onClick={() => setProValue(2)}
               >
                 ABOUT
               </a>
@@ -76,7 +98,6 @@ export const Profile = () => {
             </li>
           </ul>
         </div>
-
         <div class="profile-container">
           {proValue == 1 ? (
             <Post />
