@@ -24,21 +24,27 @@ export const SuggestionCards = () => {
     );
 
     // Update the previous index for the next swipe
-    prevIndexRef.current = currentIndex;
+    // prevIndexRef.current = currentIndex;
     if (direction === "left") {
-      // If swiped to the left, remove the first card
-      setCards((prevCards) => prevCards.slice(1));
-      console.log("cardsdfdfdfdf", cards);
-    } else if (direction === "right") {
-      // If swiped to the right, add a new card
-      //       const newCard = cards.length + 1;
-      //       setCards((prevCards) => [...prevCards, newCard]);
-      // console.log("newCard", newCard);
-      // Reset the active index to avoid issues with Swiper's internal state
-      //   swiper.slideTo(0);
+    //   // If swiped to the left, remove the first card
+    //   setCards((prevCards) => prevCards.slice(1));
+       console.log("cardsdfdfdfdf  left");
+    } else {
+    //   // If swiped to the right, add a new card
+    //   const newCard = cards.length + 1;
+      console.log("new card right" );
+    //   // setCards((prevCards) => [...prevCards, newCard]);
+    //   // console.log("newCard", newCard);
+    //   // Reset the active index to avoid issues with Swiper's internal state
+    //   swiper.slideTo(0);
     }
     // You can use this information to update your state or perform other actions
   };
+
+  console.log("direction ", direction);
+
+
+
 
   return (
     <>
@@ -66,6 +72,23 @@ export const SuggestionCards = () => {
           </SwiperSlide>
         ))}
       </Swiper>
+
+
+      {/* .................     add new card     ................... */}
+      
+
+
+  {/* <div onEnd={action("end")} className="master-root">
+    {cards.map(item => (
+      <Card
+        key={item}
+        onSwipeLeft={action("swipe left")}
+        onSwipeRight={action("swipe right")}
+      >
+        <h2>{item}</h2>
+      </Card>
+    ))}
+  </div> */}
     </>
   );
 };
