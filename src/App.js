@@ -58,7 +58,6 @@ const App = () => {
               popular and make more friends, upload your photo now!
             </div>
           </div>
-         
           <AllRoute />
         </div>
       </div>

@@ -43,9 +43,6 @@ export const SuggestionCards = () => {
 
   console.log("direction ", direction);
 
-
-
-
   return (
     <>
       <Swiper
@@ -75,9 +72,7 @@ export const SuggestionCards = () => {
 
 
       {/* .................     add new card     ................... */}
-      
-
-
+ 
   {/* <div onEnd={action("end")} className="master-root">
     {cards.map(item => (
       <Card
