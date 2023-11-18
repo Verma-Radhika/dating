@@ -1,7 +1,4 @@
-/* * {
-    box-sizing: border-box;
-  } */
-  
+
   #mainRouter {
     overscroll-behavior-y: contain;
     margin: 0;
@@ -15,14 +12,15 @@
   }
   
   .deck_container {
-    background: salmon;
-    position: fixed;
-    overflow: hidden;
-    width:75%;
-    height: 70%;
-    cursor: url("https://uploads.codesandbox.io/uploads/user/b3e56831-8b98-4fee-b941-0e27f39883ab/Ad1_-cursor.png")
+    /* background-color: salmon; */
+    /* position: absolute; */
+    /* overflow: hidden; */
+    width:80%;
+    height: auto;
+    /* cursor: url("https://uploads.codesandbox.io/uploads/user/b3e56831-8b98-4fee-b941-0e27f39883ab/Ad1_-cursor.png")
         29 29,
-      auto;
+      auto; */
+      border: 1px solid red;
   }
   
   .deck_container > div {
@@ -43,7 +41,7 @@
     background-position: center center;
     width: 45vh;
     max-width: 300px;
-    height: 550px;
+    height:450px;
     max-height: 570px;
     will-change: transform;
     border-radius: 10px;
@@ -52,16 +50,18 @@
   }
   
   .deck_img {
-    height: 80px;
+    height: 380px;
+    /* height: 100%; */
+    width: 100%;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
     border: 1ps solid red !important;
   }
-   /* button[aria-label="previous"],
+   button[aria-label="previous"],
   button[aria-label="next"] {
     background: salmon !important;
     color: black !important;
-  }  */
+  } 
   
   .h2 {
     display: inline-block;
@@ -87,7 +87,7 @@
   }
   
   .deck_card {
-    height: 500px !important;
+    /* height: 380px !important; */
     border: 1px solid red !important;
   }
   

@@ -8,8 +8,8 @@ export const Suggestions = () => {
   console.log("data...", data);
   return (
     // <div id="mainRouter">
-<div className="deck_container">
-{/* <Deck/> */}
+<div className="deck_container ">
+<Deck/>
 </div>
 // </div>
     // <div className="seuggestionContainer">

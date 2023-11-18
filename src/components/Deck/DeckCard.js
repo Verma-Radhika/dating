@@ -4,10 +4,15 @@ import Carousel from "nuka-carousel";
 
 class DeckCard extends React.Component {
   render() {
-    console.log("jhbdfkjbakf");
-    const { i, x, y, rot, scale, trans, cards, bind, objs } = this.props;
-    const { name, age, distance, text, pics } = objs[i];
-    console.log("name", objs[i]);
+    const { i, x, y, rot, scale, trans, cards, bind, objs, data } = this.props;
+    const { age, distance, text, pics } = objs[i];
+    const { image, name } = data[i];
+
+    // console.log("data in cards", data[i]);
+
+    console.log("bind", x, y, i);
+    console.log(image, pics);
+    
     return (
       <animated.div
         key={i}
@@ -26,14 +31,14 @@ class DeckCard extends React.Component {
         >
           <div className="deck_card">
             <Carousel>
-              {pics.map((pic) => (
-                <img className="deck_img" src={pic} alt="profilePicture" />
-              ))}
+              {/* {pics.map((pic) => ( */}
+              <img className="deck_img" src={image} alt="profilePicture" />
+              {/* ))} */}
             </Carousel>
             <h2 className="h2">{name},</h2>
-            <h2 className="h2">{age}</h2>
-            <h5 className="h5">{distance}</h5>
-            <h5 className="h5">{text}</h5>
+            {/* <h2 className="h2">{age}</h2> */}
+            {/* <h5 className="h5">{distance}</h5> */}
+            {/* <h5 className="h5">{text}</h5> */}
           </div>
         </animated.div>
       </animated.div>
@@ -42,7 +47,3 @@ class DeckCard extends React.Component {
 }
 
 export default DeckCard;
-
-
-
-

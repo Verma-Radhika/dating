@@ -5,9 +5,10 @@ import { useGesture } from "react-with-gesture";
 import "./deck.css";
 import { useSprings } from "react-spring";
 import DeckCard from "./DeckCard";
+import { Data } from "../../db.js";
+// import { Data } from "../../db.js";
 
 const cards = [1, 2, 3, 4];
-
 const objs = [
   {
     pics: [
@@ -47,6 +48,11 @@ const objs = [
     text: "On the first date I will carve our initials in a tree. It's the most romantic way to let you know I have a knife.",
   },
 ];
+
+
+
+
+
 
 const to = (i) => ({
   x: 0,
@@ -110,6 +116,8 @@ export const Deck = () => {
   );
 
 
+  console.log("obj",objs);
+console.log('data', Data);
   return props.map(({ x, y, rot, scale }, i) => (
     <DeckCard
       i={i}
@@ -120,6 +128,7 @@ export const Deck = () => {
       trans={trans}
       cards={cards}
       objs={objs}
+      data={Data}
       bind={bind}
     />
   ));
