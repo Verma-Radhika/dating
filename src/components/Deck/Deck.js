@@ -75,7 +75,7 @@ export const Deck = () => {
     ...to(i),
     from: from(i),
   }));
-  console.log("direction",gone )
+  // console.log("direction",gone )
 
   const bind = useGesture( 
     ({
@@ -116,8 +116,8 @@ export const Deck = () => {
   );
 
 
-  console.log("obj",objs);
-console.log('data', Data);
+//   console.log("obj",objs);
+// console.log('data', Data);
   return props.map(({ x, y, rot, scale }, i) => (
     <DeckCard
       i={i}

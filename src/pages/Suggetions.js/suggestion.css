@@ -1,9 +1,9 @@
 .seuggestionContainer{
-    width: 80%;
-    height: auto;
-    background-color: aliceblue;
+    /* position: absolute !important; */
+    /* width: 97.5%;
+    height: 100vh; */
     /* border: 1px solid red; */
     /* margin: auto; */
     /* padding: 20px; */
-    margin: 30px auto;
+    /* margin: 30px auto; */
 }

@@ -9,10 +9,9 @@ class DeckCard extends React.Component {
     const { image, name } = data[i];
 
     // console.log("data in cards", data[i]);
+    // console.log("bind", x, y, i);
+  console.log("direction" ,rot, scale, trans )
 
-    console.log("bind", x, y, i);
-    console.log(image, pics);
-    
     return (
       <animated.div
         key={i}
