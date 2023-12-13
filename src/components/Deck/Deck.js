@@ -6,7 +6,6 @@ import "./deck.css";
 import { useSprings } from "react-spring";
 import DeckCard from "./DeckCard";
 import { Data } from "../../db.js";
-// import { Data } from "../../db.js";
 
 const cards = [1, 2, 3, 4];
 const objs = [
@@ -48,11 +47,6 @@ const objs = [
     text: "On the first date I will carve our initials in a tree. It's the most romantic way to let you know I have a knife.",
   },
 ];
-
-
-
-
-
 
 const to = (i) => ({
   x: 0,
@@ -116,10 +110,16 @@ export const Deck = () => {
   );
 
 
-//   console.log("obj",objs);
-// console.log('data', Data);
+
+  const getCardValue =(i)=>{
+    console.log("value" );
+    const value = i ;
+
+
+  }
   return props.map(({ x, y, rot, scale }, i) => (
     <DeckCard
+    onClick={()=>getCardValue(i)}
       i={i}
       x={x}
       y={y}
@@ -133,3 +133,11 @@ export const Deck = () => {
     />
   ));
 };
+
+
+// first road map   -- mongodb  
+// then sources ... ->
+// think about what i learn 
+// - document 
+// vedio 
+//  

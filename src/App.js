@@ -6,7 +6,6 @@ import { Navbar } from "./components/Navbar/Navbar";
 import { ExtraFileNav } from "./components/Navbar/ExtraFileNav";
 // import ExtraFileNav from "./components/Navbar/ExtraFileNav";
 const App = () => {
-
   // const [counter, setCounter] = useState(0);
   // const timer = 1000;
   // const CounterFunction = () => {
@@ -23,9 +22,7 @@ const App = () => {
   return (
     <>
       <Navbar />
-
-{/* <ExtraFileNav/> */}
-
+      {/* <ExtraFileNav/> */}
       <div className="appContainer">
         <div>
           <Sidebar />
@@ -46,7 +43,6 @@ const App = () => {
               height="100%"
             />
           </div>
-
           <div
             class="card"
             style={{
@@ -66,3 +62,15 @@ const App = () => {
 };
 
 export default App;
+
+// import { MainPageSide } from "./components/newCardPage/MainPageSide"
+// import { Login } from "./pages/Login/Login";
+//  const App =()=>{
+//   return (
+//     <>
+//     <Login/>
+//     </>
+//   )
+// }
+
+// export default App;

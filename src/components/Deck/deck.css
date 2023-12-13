@@ -30,7 +30,7 @@
     height: 70%;
     will-change: transform;
     display: flex;
-    border: 2px solid blue;
+    /* border: 2px solid blue; */
     align-items: center;
     justify-content: center;
   }
@@ -49,15 +49,15 @@
     height:400px;
     max-height: 480px;
     will-change: transform;
-    border: 1px solid green;
+    /* border: 1px solid green; */
     border-radius: 10px;
     box-shadow: 0 12.5px 100px -10px rgba(50, 50, 73, 0.4),
       0 10px 10px -10px rgba(50, 50, 73, 0.3);
   }
   
   .deck_img {
-    /* height: 380px; */
-    height: 100%;
+    height: 320px;
+    /* height: 70%; */
     width: 100%;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
@@ -96,7 +96,7 @@
   
   .deck_card {
     height: 90% !important;
-    border: 1px solid red !important;
+    /* border: 1px solid red !important; */
   }
   
   .slider-control-bottomcenter {
@@ -110,15 +110,19 @@
 
 
   /*  for media quary apply on card */
-  /* .seuggestionContainer > div {
-    position: absolute;
-    width: 80%;
-    height: 50%;
-    will-change: transform;
-    display: flex                                              1;
-    border: 2px solid blue;
-    align-items: center;
-    justify-content: center;
-  } */
+  
+
+  @media screen and (max-width: 768px) {
+    .seuggestionContainer > div {
+      position: absolute;
+      width: 80%;
+      height: 55%;
+      will-change: transform;
+      display: flex;
+      /* border: 2px solid blue; */
+      align-items: center;
+      justify-content: center;
+    }
+  }
 
 

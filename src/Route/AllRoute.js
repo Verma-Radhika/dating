@@ -13,6 +13,8 @@ import { PopularHome } from "../pages/Popular/PopularHome";
 import { LikesPage } from "../pages/Likes/LikesPage";
 import { Setting } from "../pages/Setting/Setting";
 import { WatchVideo } from "../pages/WatchVideo";
+import { Login } from "../pages/Login/Login";
+import { Register } from "../pages/Register/Register";
 export const AllRoute = () => {
   return (
     <Routes>
@@ -32,6 +34,9 @@ export const AllRoute = () => {
       <Route path="/likes" element={<LikesPage />} />
       <Route path="/settings" element={<Setting/>}/>
       <Route path="/watchVideo" element={<WatchVideo/>}/>
+      <Route path="/login" element={<Login/>}/>
+      <Route path="/register" element={<Register/>}/>
+
       {/* .......................................................... */}
       <Route path="/about" element={<About />} />
     </Routes>

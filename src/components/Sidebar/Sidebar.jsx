@@ -94,7 +94,7 @@ const Sidebar = ({ children }) => {
       icon: <FavoriteIcon />,
     },
   ];
-  const [open, setOpen] = React.useState(false);
+  const [open, setOpen] = React.useState(false); 
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
 
@@ -152,6 +152,9 @@ const Sidebar = ({ children }) => {
         </div>
       </div>
       {/* modal............................... */}
+
+      <div>
+        </div>
       <Modal
         open={open}
         onClose={handleClose}

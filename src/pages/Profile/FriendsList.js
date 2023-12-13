@@ -2,7 +2,6 @@
 
 import "./ProfileStyles/profile.css";
 export const FriendsList = () => {
-
   return (
     <div class="tab-content p-0">
       <div class="tab-pane fade in active show" id="profile-friends">
@@ -44,15 +43,15 @@ export const FriendsList = () => {
                       }}
                     >
                       <li>
-                        <a href="javascript:;">Action 1</a>
+                        <a href="javascript:;">Block</a>
                       </li>
                       <li>
-                        <a href="javascript:;">Action 2</a>
+                        <a href="javascript:;">Delete</a>
                       </li>
                       <li>
-                        <a href="javascript:;">Action 3</a>
+                        <a href="javascript:;">Chat</a>
                       </li>
-                      <li class="divider"></li>
+                      <li class="divider">hhh</li>
                       <li>
                         <a href="javascript:;">Action 4</a>
                       </li>
@@ -546,6 +545,9 @@ export const FriendsList = () => {
               </div>
             </div>
           </div>
+
+
+          
           <div class="col-md-6 m-b-2">
             <div class="p-10 bg-white">
               <div class="media media-xs overflow-visible">

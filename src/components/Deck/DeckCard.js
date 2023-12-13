@@ -28,7 +28,7 @@ class DeckCard extends React.Component {
             transform: interpolate([rot, scale], trans),
           }}
         >
-          <div className="deck_card">
+          <div className="deck_card" >
             <Carousel>
               {/* {pics.map((pic) => ( */}
               <img className="deck_img" src={image} alt="profilePicture" />
