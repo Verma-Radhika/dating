@@ -5,7 +5,6 @@ export const Messages = () => {
 
   const handleMenuClick = () => {
     setMenuToggled(!isMenuToggled);
-
     console.log("f djffg ");
   };
   return (
@@ -105,7 +104,7 @@ export const Messages = () => {
                       <li class="person" data-chat="person5">
                         <div class="user">
                           <img
-                            src="https://www.bootdey.com/img/Content/avatar/avatar5.png"
+                             src="https://www.bootdey.com/img/Content/avatar/avatar5.png"
                             alt="Retail Admin"
                           />
                           <span class="status away"></span>

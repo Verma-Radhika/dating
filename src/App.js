@@ -5,6 +5,7 @@ import { AllRoute } from "./Route/AllRoute";
 import { Navbar } from "./components/Navbar/Navbar";
 import { ExtraFileNav } from "./components/Navbar/ExtraFileNav";
 // import ExtraFileNav from "./components/Navbar/ExtraFileNav";
+export const apiUrl = "http://localhost:4000/api/v1/users";
 const App = () => {
   // const [counter, setCounter] = useState(0);
   // const timer = 1000;
@@ -22,7 +23,6 @@ const App = () => {
   return (
     <>
       <Navbar />
-      {/* <ExtraFileNav/> */}
       <div className="appContainer">
         <div>
           <Sidebar />
@@ -33,7 +33,6 @@ const App = () => {
             style={{
               width: "100%",
               height: "100px",
-              // border: "1px solid red",
               marginTop: "10px",
             }}
           >
@@ -62,15 +61,3 @@ const App = () => {
 };
 
 export default App;
-
-// import { MainPageSide } from "./components/newCardPage/MainPageSide"
-// import { Login } from "./pages/Login/Login";
-//  const App =()=>{
-//   return (
-//     <>
-//     <Login/>
-//     </>
-//   )
-// }
-
-// export default App;

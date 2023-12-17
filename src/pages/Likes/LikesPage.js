@@ -47,8 +47,7 @@ export const LikesPage = () => {
           {/* {searchPage ? <PeopleNearBy /> : <Popular />} */}
         </div>
       </div>
-
       {/* .............................show data......................... */}
     </>
   );
-};  
+};

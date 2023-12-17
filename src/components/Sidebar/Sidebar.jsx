@@ -38,7 +38,7 @@ const style = {
   // border: "1px solid white",
   boxShadow: 24,
   p: 4,
-  border:"1px solid red",
+  border: "1px solid red",
 };
 
 const Sidebar = ({ children }) => {
@@ -94,7 +94,7 @@ const Sidebar = ({ children }) => {
       icon: <FavoriteIcon />,
     },
   ];
-  const [open, setOpen] = React.useState(false); 
+  const [open, setOpen] = React.useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
 
@@ -103,12 +103,14 @@ const Sidebar = ({ children }) => {
       <div className="SideBarcontainer">
         <div style={{ width: !sideBar ? "450px" : "50px" }} className="sidebar">
           <div className="top_section">
-            <h1
-              style={{ display: !sideBar ? "block" : "none" }}
-              className="logo"
-            >
-              Logo
-            </h1>
+            {/* <div style={{ width: "100%", height: "70px", background: "red" }}> */}
+              <h1
+                style={{ display: !sideBar ? "block" : "none" }}
+                className="logo"
+              >
+              Name
+              </h1>
+            {/* </div> */}
             {matches ? (
               <div
                 style={{ marginLeft: !sideBar ? "50px" : "0px" }}
@@ -153,8 +155,7 @@ const Sidebar = ({ children }) => {
       </div>
       {/* modal............................... */}
 
-      <div>
-        </div>
+      <div></div>
       <Modal
         open={open}
         onClose={handleClose}
@@ -167,7 +168,6 @@ const Sidebar = ({ children }) => {
             variant="h5"
             component="h1"
             sx={{ paddingBottom: 1 }}
-           
           >
             Feedbacks & Suggestions
           </Typography>

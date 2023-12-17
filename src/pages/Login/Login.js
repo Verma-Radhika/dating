@@ -1,54 +1,43 @@
 import React, { useState } from "react";
 import "./login.css";
 import { Link, useNavigate } from "react-router-dom";
+import { apiUrl } from "../../App";
 
 export const Login = () => {
+  const navigator = useNavigate();
   const [logStyle, setLogStyle] = useState("container");
   const [active, setActive] = useState(true);
-  const navigat = useNavigate();
-  const toggleForm = () => {
-    //   const container = document.querySelector(".container");
-    // https://codepen.io/kh3996/pen/pojXrBj
-    //   container.classList.toggle("active");
-    setLogStyle(`${logStyle} + active}`);
-  };
-
-  const [inputValue, setInputValue] = useState({
+  const [userValue, setUserValue] = useState({
     email: "",
     password: "",
   });
 
-  const handleChange = (e) => {
+  const handleLoginValue = (e) => {
     const { name, value } = e.target;
-    setInputValue({ ...inputValue, [name]: value });
+    console.log("name", name, value);
+    setUserValue({ ...userValue, [name]: value });
   };
+  // console.log("userValue" , userValue);
 
-  const handleSubmit = (e) => {
+  const handleSubmitLogin = (e) => {
     e.preventDefault();
-    console.log("inputvalue", inputValue);
-    fetch("http://localhost:4500/findBothLogin", {
+    // e.preventDefault();
+    fetch(`${apiUrl}/login`, {
       method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(inputValue),
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(userValue),
     })
-      .then((res) => res.json())
-      .then((data) => {
-        console.log("data", data);
-        if (data.status === true) {
-          if (data.role === "admin") {
-            localStorage.setItem("Token",data.token)
-            localStorage.setItem("role", data.role);
-            navigat("/");
-          } else if (data.role === "user") {
-            localStorage.setItem("Token",data.token)
-            localStorage.setItem("role", data.role);
-            navigat("/");
-          } else {
-            navigat("/register");
-          }
+      .then((res) => {
+        console.log("res", res);
+        console.log("data", res.ok);
+        if (res.ok === true) {
+          alert("login succesfully!! ");
+          navigator("/");
         } else {
-          console.log("error")
-          alert(data.massage);
+          console.log(res);
+          alert(res.statusText);
         }
       })
       .catch((error) => console.log("error", error));
@@ -67,33 +56,30 @@ export const Login = () => {
               />
             </div>
             <div class="formBx">
-              <form>
+              <form
+                onSubmit={(e) => {
+                  handleSubmitLogin(e);
+                  return false;
+                }}
+              >
                 <h2>Sign In</h2>
                 <input
                   type="text"
                   name="email"
-                  value={inputValue.email}
+                  onChange={handleLoginValue}
                   placeholder="enter email"
-                  onChange={(e) => handleChange(e)}
                 />
                 <input
                   type="password"
                   name="password"
-                  value={inputValue.password}
-                  onChange={(e) => handleChange(e)}
+                  onChange={handleLoginValue}
                   placeholder="Password"
                 />
-                <input
-                  type="submit"
-                  name=""
-                  value="Login"
-                  onClick={(e) =>handleSubmit(e)}
-                />
+                <input type="submit" name="" value="Login" />
                 <p class="signup">
-                  Don't have an account ?  
-                  <Link to="/register">Sign Up.</Link>
+                  Don't have an account ?<Link to="/register">Sign Up.</Link>
                 </p>
-              </form> 
+              </form>
             </div>
           </div>
         </div>

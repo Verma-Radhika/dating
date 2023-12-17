@@ -1,45 +1,47 @@
 import React, { useState } from "react";
 import "./../Login/login.css";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { apiUrl } from "../../App";
 export const Register = () => {
+  const navigator =useNavigate();
   const [active, setActive] = useState(true);
-
-  const [inputValue, setInputValue] = useState({
-    name: "",
+  const [userValue, setUserValue] = useState({
+    userName: "",
+    fullName: "",
     email: "",
     password: "",
-    phoneNumber: "",
+    location: "",
+    gender: "",
   });
 
-  const handleInputValue = (e) => {
+  const handleUserValue = (e) => {
+    // console.log(e.target.value);
     const { name, value } = e.target;
-    console.log("e", value, name);
-    setInputValue({
-      ...inputValue,
-      [name]: value,
-    });
-  }; 
+    // console.log("name", name);
+    setUserValue({ ...userValue, [name]: value });
+  };
+
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log("input Value", inputValue);
-    fetch("http://localhost:4500/register", {
+    // console.log(userValue);
+    fetch(`${apiUrl}/register`, {
+      mode: "cors",
       method: "POST",
-      // mode: "cors", // no-cors, *cors, same-origin
-      // cache: "no-cache",
-      // headers: {
-      //   "Content-Type": "application/json",
-      //   Accept: "application/json",
-      // },
-
-      // credentials: "same-origin", // include, *same-origin, omit
       headers: {
         "Content-Type": "application/json",
-        // 'Content-Type': 'application/x-www-form-urlencoded',
       },
-      body: JSON.stringify(inputValue),
+      body: JSON.stringify(userValue),
     })
-      .then((res) => res.json())
-      .then((data) => console.log("data", data))
+      .then((data) => {
+        // console.log("data",data.Ok)
+        if(data.ok === true){
+          alert("Register succesfully!! ");
+          navigator("/login");
+        }
+        else{
+          alert(data.statusText);
+        }
+      })
       .catch((error) => console.log("error", error));
   };
 
@@ -58,27 +60,48 @@ export const Register = () => {
                 <h2>Create an account</h2>
                 <input
                   type="text"
-                  name="name"
-                  onChange={handleInputValue}
+                  name="userName"
                   placeholder="Username"
+                  // value={userValue.username}
+                  onChange={handleUserValue}
                 />
+                <input
+                  type="text"
+                  name="fullName"
+                  placeholder="Name"
+                  // value={userValue.name}
+                  onChange={handleUserValue}
+                />
+                <select
+                  // value={userValue.gender}
+                  name="gender"
+                  onChange={handleUserValue}
+                >
+                  <option value={"default"}>Gender</option>
+                  <option value={"Male"}>Male</option>
+                  <option value={"Female"}>Female</option>
+                  <option value={"other"}>Other</option>
+                </select>
                 <input
                   type="email"
                   name="email"
-                  onChange={handleInputValue}
                   placeholder="Email Address"
+                  // value={userValue.email}
+                  onChange={handleUserValue}
                 />
                 <input
                   type="password"
                   name="password"
-                  onChange={handleInputValue}
                   placeholder="Create Password"
+                  // value={userValue.password}
+                  onChange={handleUserValue}
                 />
                 <input
-                  type="text"
-                  name="phoneNumber"
-                  onChange={handleInputValue}
-                  placeholder="Phone Number"
+                  type="location"
+                  name="location"
+                  placeholder="Location"
+                  // value={userValue.location}
+                  onChange={handleUserValue}
                 />
                 <input type="submit" name="" value="Sign Up" />
                 <p class="signup">

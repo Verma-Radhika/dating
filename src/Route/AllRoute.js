@@ -23,8 +23,7 @@ export const AllRoute = () => {
       <Route path="/meet/new/friends" element={<MeetNewFnd />} />
       <Route path="/suggestions" element={<Suggestions />} />
       <Route path="/profile/:id" element={<Profile />} />
-      <Route path="/myprofile/" element={<Profile />} />
-
+      <Route path="/myProfile/" element={<Profile />} />
       <Route path="/messages" element={<Messages />} />
       <Route path="/friends/request" element={<FrndRequest />} />
       <Route path="/visitors" element={<Visitor />} />
