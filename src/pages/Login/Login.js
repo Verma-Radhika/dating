@@ -11,7 +11,6 @@ export const Login = () => {
     email: "",
     password: "",
   });
-
   const handleLoginValue = (e) => {
     const { name, value } = e.target;
     console.log("name", name, value);
@@ -28,20 +27,23 @@ export const Login = () => {
         "Content-Type": "application/json",
       },
       body: JSON.stringify(userValue),
-    })
-      .then((res) => {
-        console.log("res", res);
-        console.log("data", res.ok);
-        if (res.ok === true) {
-          alert("login succesfully!! ");
+    }).then((res)=>res.json())
+      .then((data) => {
+        console.log("data", data);
+        if (data.success === true) {
+localStorage.setItem("token", JSON.stringify(data))
+          alert("login successfully!! ");
           navigator("/");
         } else {
-          console.log(res);
-          alert(res.statusText);
+          // console.log(data);
+          alert(data.message);
         }
       })
       .catch((error) => console.log("error", error));
   };
+
+
+
 
   return (
     <div>

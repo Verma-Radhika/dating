@@ -31,15 +31,15 @@ export const Register = () => {
         "Content-Type": "application/json",
       },
       body: JSON.stringify(userValue),
-    })
+    }).then((res)=>res.json())
       .then((data) => {
         // console.log("data",data.Ok)
-        if(data.ok === true){
-          alert("Register succesfully!! ");
+        if(data.success === true){
+          alert("Register successfully!! ");
           navigator("/login");
         }
         else{
-          alert(data.statusText);
+          alert(data.message);
         }
       })
       .catch((error) => console.log("error", error));

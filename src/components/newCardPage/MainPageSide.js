@@ -5,7 +5,6 @@ import { NavBarSide } from "./NavBarSide";
 
 export const MainPageSide = () => {
     const [show ,setShow] = useState(false);
-
     const openFunc=()=>{
         setShow(!show);
     }

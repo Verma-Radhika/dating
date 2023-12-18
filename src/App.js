@@ -4,6 +4,9 @@ import Sidebar from "./components/Sidebar/Sidebar";
 import { AllRoute } from "./Route/AllRoute";
 import { Navbar } from "./components/Navbar/Navbar";
 import { ExtraFileNav } from "./components/Navbar/ExtraFileNav";
+import { Route, Routes } from "react-router-dom";
+import { Login } from "./pages/Login/Login";
+import { Register } from "./pages/Register/Register";
 // import ExtraFileNav from "./components/Navbar/ExtraFileNav";
 export const apiUrl = "http://localhost:4000/api/v1/users";
 const App = () => {
@@ -20,8 +23,14 @@ const App = () => {
   //   return ()=> clearInterval(func)
   // },);
 
+  
+  var token = JSON.parse(localStorage.getItem("token"))
+  console.log("token" ,token)
+
   return (
     <>
+
+    {token ?  <>
       <Navbar />
       <div className="appContainer">
         <div>
@@ -56,6 +65,12 @@ const App = () => {
           <AllRoute />
         </div>
       </div>
+    </> :  
+    <Routes>
+      <Route path="/" element={<Login/>}/>
+      <Route path="/register" element={<Register/>}/>
+    </Routes>
+    }
     </>
   );
 };

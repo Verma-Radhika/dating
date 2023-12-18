@@ -15,8 +15,14 @@ import { Setting } from "../pages/Setting/Setting";
 import { WatchVideo } from "../pages/WatchVideo";
 import { Login } from "../pages/Login/Login";
 import { Register } from "../pages/Register/Register";
+import { ExtraPage } from "../pages/ExtraPage/ExtraPage";
 export const AllRoute = () => {
+
+  var token = JSON.parse(localStorage.getItem("token"))
+  console.log("token" ,token)
   return (
+    <>
+  {/* {token ? */}
     <Routes>
       <Route path="/" element={<MeetNewFnd />} />
       {/* ............................My Pages............................ */}
@@ -33,11 +39,15 @@ export const AllRoute = () => {
       <Route path="/likes" element={<LikesPage />} />
       <Route path="/settings" element={<Setting/>}/>
       <Route path="/watchVideo" element={<WatchVideo/>}/>
-      <Route path="/login" element={<Login/>}/>
-      <Route path="/register" element={<Register/>}/>
+      {/* <Route path="/login" element={<Login/>}/>
+      <Route path="/register" element={<Register/>}/> */}
 
       {/* .......................................................... */}
       <Route path="/about" element={<About />} />
     </Routes>
+{/* :
+<Register/>
+} */}
+    </>
   );
 };

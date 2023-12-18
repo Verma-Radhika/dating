@@ -47,31 +47,23 @@
 // //             <a href="/myprofile" className="navLink">
 // //             <span> User_Name</span> <Face3Icon />
 // //             </a>
-            
+
 // //           </li>
 // //         </ul>
-// //     * {matches ? <CloseIcon onClick={() => toggleBtnufun()} /> : ""} 
+// //     * {matches ? <CloseIcon onClick={() => toggleBtnufun()} /> : ""}
 // //       </nav>
 // //       <main></main>
-// //     </> 
+// //     </>
 
 // //   );
 // // };
 
-    
-
 // //  {/* <>
-     
-    
+
 // //     */}
 
+// //     {/*
 
-
-
-
-
-// //     {/* 
-  
 // //       <div class="container-fluid">
 // //         <button
 // //           class="navbar-toggler"
@@ -84,7 +76,7 @@
 // //         >
 // //           <i class="fas fa-bars"></i>
 // //         </button>
-    
+
 // //         <div class="collapse navbar-collapse" id="navbarSupportedContent">
 // //           <a class="navbar-brand mt-2 mt-lg-0" href="#">
 // //             <img
@@ -106,11 +98,11 @@
 // //             </li>
 // //           </ul>
 // //         </div>
-    
+
 // //         <div class="d-flex align-items-center">
 // //           <a class="text-reset me-3" href="#">
 // //             <i class="fas fa-shopping-cart"></i>
-// //           </a>    
+// //           </a>
 // //           <div class="dropdown">
 // //             <a
 // //               class="text-reset me-3 dropdown-toggle hidden-arrow"
@@ -175,28 +167,6 @@
 // //     </nav>
 // //   */}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // import React, { useContext, useState, useEffect } from "react";
 // import "./nav.css";
 // import CloseIcon from "@mui/icons-material/Close";
@@ -255,9 +225,6 @@
 //   );
 // };
 
-
-
-
 import React, { useContext, useState, useEffect } from "react";
 import "./nav.css";
 import CloseIcon from "@mui/icons-material/Close";
@@ -269,33 +236,91 @@ import NotificationsIcon from "@mui/icons-material/Notifications";
 import PeopleIcon from "@mui/icons-material/People";
 import Face3Icon from "@mui/icons-material/Face3";
 
-export const Navbar =()=>{
-
+export const Navbar = () => {
+  const matches = useMediaQuery("(max-width:990px)");
 
   return (
     <nav class="navbar navbar-expand-lg">
-        <div class="container-fluid">
-          <a class="navbar-brand navbar__logo" href="/">Navbar</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <div class="container-fluid">
+        <a class="navbar-brand navbar__logo" href="/">
+          Navbar
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          {!matches ? (
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link navLink" aria-current="page" href="#"> <EmailIcon /></a>
+                <a class="nav-link navLink" aria-current="page" href="#">
+                  {" "}
+                  <EmailIcon />
+                </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="notifications"><NotificationsIcon/></a>
+                <a class="nav-link" href="notifications">
+                  <NotificationsIcon />
+                </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#"><PeopleIcon/></a>
+                <a class="nav-link" href="#">
+                  <PeopleIcon />
+                </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">user<i class="fa-solid fa-user"></i></a>
+                <a class="nav-link" href="myProfile">
+                  user<i class="fa-solid fa-user"></i>
+                </a>
+              </li>
+              <li class="nav-item"><a class="nav-link">
+                  logout
+                </a></li>
+            </ul>
+          ) : (
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link navLink" aria-current="page" href="#">
+                  {" "}
+                  <EmailIcon />
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="notifications">
+                  <NotificationsIcon />
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">
+                  <PeopleIcon />
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="myProfile">
+                  user<i class="fa-solid fa-user"></i>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="myProfile">
+                  View Profile<i class="fa-solid fa-user"></i>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="settings">
+                  <i class="fa fa-cog"></i>
+                </a>
               </li>
             </ul>
-           </div>
+          )}
         </div>
-      </nav>
-  )
-}
+      </div>
+    </nav>
+  );
+};

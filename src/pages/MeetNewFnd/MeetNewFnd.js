@@ -54,8 +54,6 @@ export const MeetNewFnd = () => {
       </div>
 
       {/* .............................show data......................... */}
-
-
       <SearchPageData data={searchData} />
     </>
   );
