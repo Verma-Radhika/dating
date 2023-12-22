@@ -49,7 +49,7 @@ const Sidebar = ({ children }) => {
   const sideBar = useMediaQuery("(max-width:1000px)");
   const [isOpen, setIsOpen] = useState(true);
   const toggle = () => setIsOpen(!isOpen);
-  console.log("match", matches);
+  // console.log("match", matches);
   const menuItem = [
     {
       path: "/meet/new/friends",

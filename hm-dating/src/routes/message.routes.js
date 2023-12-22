@@ -5,4 +5,4 @@ const router = Router()
 router.route('/addmsg').post(addMessage)
 router.route('/getmsg').get(getMessages)
 
-export default router
+export default router;

@@ -4,93 +4,93 @@ import CheckIcon from "@mui/icons-material/Check";
 import ClearIcon from "@mui/icons-material/Clear";
 // export const FrndRequest = () => {
 //   return (
-    // <div class="container bootstrap snippets bootdey mt-3">
-    //   <div class="jumbotron list-content">
-    //     <ul class="list-group">
-    //       <li href="#" class="list-group-item title">
+    // <div className="container bootstrap snippets bootdey mt-3">
+    //   <div className="jumbotron list-content">
+    //     <ul className="list-group">
+    //       <li href="#" className="list-group-item title">
     //         Your friend Request
     //       </li>
-    //       <li href="#" class="list-group-item text-left">
+    //       <li href="#" className="list-group-item text-left">
     //         <img
-    //           class="img-thumbnail"
+    //           className="img-thumbnail"
     //           src="https://bootdey.com/img/Content/User_for_snippets.png"
     //         />
-    //         <label class="name">
+    //         <label className="name">
     //           Juan guillermo cuadrado
     //           <br />
     //         </label>
-    //         <label class="pull-right">
-    //           <a class="btn btn-success btn-xs glyphicon glyphicon-ok">
+    //         <label className="pull-right">
+    //           <a className="btn btn-success btn-xs glyphicon glyphicon-ok">
     //             <CheckIcon />
     //           </a>
     //           <a
-    //             class="btn btn-danger  btn-sm glyphicon glyphicon-trash"
+    //             className="btn btn-danger  btn-sm glyphicon glyphicon-trash"
     //             href="#"
     //             title="Delete"
     //           >
     //             <ClearIcon />
     //           </a>
     //           <a
-    //             class="btn btn-info  btn-xs glyphicon glyphicon glyphicon-comment"
+    //             className="btn btn-info  btn-xs glyphicon glyphicon glyphicon-comment"
     //             href="#"
     //             title="Send message"
     //           ></a>
     //         </label>
-    //         <div class="break"></div>
+    //         <div className="break"></div>
     //       </li>
-    //       <li href="#" class="list-group-item text-left">
+    //       <li href="#" className="list-group-item text-left">
     //         <img
-    //           class="img-thumbnail"
+    //           className="img-thumbnail"
     //           src="https://bootdey.com/img/Content/user_1.jpg"
     //         />
-    //         <label class="name">James Rodriguez (10)</label>
-    //         <label class="pull-right">
-    //           <a class="btn btn-success btn-xs glyphicon glyphicon-ok">
+    //         <label className="name">James Rodriguez (10)</label>
+    //         <label className="pull-right">
+    //           <a className="btn btn-success btn-xs glyphicon glyphicon-ok">
     //             <CheckIcon />
     //           </a>
     //           <a
-    //             class="btn btn-danger  btn-xs glyphicon glyphicon-trash"
+    //             className="btn btn-danger  btn-xs glyphicon glyphicon-trash"
     //             href="#"
     //             title="Delete"
     //           >
     //             <ClearIcon />
     //           </a>
     //           <a
-    //             class="btn btn-info  btn-xs glyphicon glyphicon glyphicon-comment"
+    //             className="btn btn-info  btn-xs glyphicon glyphicon glyphicon-comment"
     //             href="#"
     //             title="Send message"
     //           ></a>
     //         </label>
-    //         <div class="break"></div>
+    //         <div className="break"></div>
     //       </li>
-    //       <li href="#" class="list-group-item text-left">
+    //       <li href="#" className="list-group-item text-left">
     //         <img
-    //           class="img-thumbnail"
+    //           className="img-thumbnail"
     //           src="https://bootdey.com/img/Content/user_2.jpg"
     //         />
-    //         <label class="name">Mariana pajon</label>
-    //         <label class="pull-right">
-    //           <a class="btn btn-success btn-xs glyphicon glyphicon-ok">
+    //         <label className="name">Mariana pajon</label>
+    //         <label className="pull-right">
+    //           <a className="btn btn-success btn-xs glyphicon glyphicon-ok">
     //             <CheckIcon />
     //           </a>
     //           <a
-    //             class="btn btn-danger  btn-xs glyphicon glyphicon-trash"
+    //             className="btn btn-danger  btn-xs glyphicon glyphicon-trash"
     //             href="#"
     //             title="Delete"
     //           >
     //             <ClearIcon />
     //           </a>
     //           <a
-    //             class="btn btn-info  btn-xs glyphicon glyphicon glyphicon-comment"
+    //             className="btn btn-info  btn-xs glyphicon glyphicon glyphicon-comment"
     //             href="#"
     //             title="Send message"
     //           ></a>
     //         </label>
-    //         <div class="break"></div>
+    //         <div className="break"></div>
     //       </li>
-    //       <li href="#" class="list-group-item text-left">
-    //         <a class="btn btn-block btn-primary">
-    //           <i class="glyphicon glyphicon-refresh"></i>
+    //       <li href="#" className="list-group-item text-left">
+    //         <a className="btn btn-block btn-primary">
+    //           <i className="glyphicon glyphicon-refresh"></i>
     //           Load more...
     //         </a>
     //       </li>
@@ -108,33 +108,33 @@ import "../Notification/Notification.css";
 export const FrndRequest = () => {
   return (
     <div>
-      <section class="section-50">
-        <div class="container">
-          {/* <h3 class="m-b-50 heading-line">
-            Notifications <i class="fa fa-bell text-muted"></i>
+      <section className="section-50">
+        <div className="container">
+          {/* <h3 className="m-b-50 heading-line">
+            Notifications <i className="fa fa-bell text-muted"></i>
           </h3> */}
 
-          <div class="notification-ui_dd-content">
-            <div class="notification-list notification-list--unread">
-              <div class="notification-list_content">
-                <div class="notification-list_img">
+          <div className="notification-ui_dd-content">
+            <div className="notification-list notification-list--unread">
+              <div className="notification-list_content">
+                <div className="notification-list_img">
                   <img src="https://i.imgur.com/zYxDCQT.jpg" alt="user" />
                 </div>
-                <div class="notification-list_detail">
+                <div className="notification-list_detail">
                   <p>
                     <b>John Doe</b> reacted to your post
                   </p>
-                  <p class="text-muted">
+                  <p className="text-muted">
                     <small>10 mins ago</small>
                   </p>
                 </div>
               </div>
-              <div class="">
-                <a class="btn btn-success btn-xs glyphicon glyphicon-ok">
+              <div className="">
+                <a className="btn btn-success btn-xs glyphicon glyphicon-ok">
                   <CheckIcon />
                 </a>
                 <a
-                  class="btn btn-danger  btn-sm glyphicon glyphicon-trash"
+                  className="btn btn-danger  btn-sm glyphicon glyphicon-trash"
                   href="#"
                   title="Delete"
                 >
@@ -146,86 +146,86 @@ export const FrndRequest = () => {
                 /> */}
               </div>
             </div>
-            <div class="notification-list notification-list--unread">
-              <div class="notification-list_content">
-                <div class="notification-list_img">
+            <div className="notification-list notification-list--unread">
+              <div className="notification-list_content">
+                <div className="notification-list_img">
                   <img src="https://i.imgur.com/w4Mp4ny.jpg" alt="user" />
                 </div>
-                <div class="notification-list_detail">
+                <div className="notification-list_detail">
                   <p>
                     <b>Richard Miles</b> liked your post
                   </p>
-                  <p class="text-muted">
+                  <p className="text-muted">
                     <small>10 mins ago</small>
                   </p>
                 </div>
               </div>
-              <div class="notification-list_feature-img">
+              <div className="notification-list_feature-img">
                 <img
                   src="https://i.imgur.com/AbZqFnR.jpg"
                   alt="Feature image"
                 />
               </div>
             </div>
-            <div class="notification-list">
-              <div class="notification-list_content">
-                <div class="notification-list_img">
+            <div className="notification-list">
+              <div className="notification-list_content">
+                <div className="notification-list_img">
                   <img src="https://i.imgur.com/ltXdE4K.jpg" alt="user" />
                 </div>
-                <div class="notification-list_detail">
+                <div className="notification-list_detail">
                   <p>
                     <b>Brian Cumin</b> reacted to your post
                   </p>
 
-                  <p class="text-muted">
+                  <p className="text-muted">
                     <small>10 mins ago</small>
                   </p>
                 </div>
               </div>
-              <div class="notification-list_feature-img">
+              <div className="notification-list_feature-img">
                 <img
                   src="https://i.imgur.com/bpBpAlH.jpg"
                   alt="Feature image"
                 />
               </div>
             </div>
-            <div class="notification-list">
-              <div class="notification-list_content">
-                <div class="notification-list_img">
+            <div className="notification-list">
+              <div className="notification-list_content">
+                <div className="notification-list_img">
                   <img src="https://i.imgur.com/CtAQDCP.jpg" alt="user" />
                 </div>
-                <div class="notification-list_detail">
+                <div className="notification-list_detail">
                   <p>
                     <b>Lance Bogrol</b> reacted to your post
                   </p>
-                  <p class="text-muted">
+                  <p className="text-muted">
                     <small>10 mins ago</small>
                   </p>
                 </div>
               </div>
-              <div class="notification-list_feature-img">
+              <div className="notification-list_feature-img">
                 <img
                   src="https://i.imgur.com/iIhftMJ.jpg"
                   alt="Feature image"
                 />
               </div>
             </div>
-            <div class="notification-list">
-              <div class="notification-list_content">
-                <div class="notification-list_img">
+            <div className="notification-list">
+              <div className="notification-list_content">
+                <div className="notification-list_img">
                   <img src="https://i.imgur.com/zYxDCQT.jpg" alt="user" />
                 </div>
-                <div class="notification-list_detail">
+                <div className="notification-list_detail">
                   <p>
                     <b>Parsley Montana</b> reacted to your post
                   </p>
 
-                  <p class="text-muted">
+                  <p className="text-muted">
                     <small>10 mins ago</small>
                   </p>
                 </div>
               </div>
-              <div class="notification-list_feature-img">
+              <div className="notification-list_feature-img">
                 <img
                   src="https://i.imgur.com/bpBpAlH.jpg"
                   alt="Feature image"
@@ -234,8 +234,8 @@ export const FrndRequest = () => {
             </div>
           </div>
 
-          <div class="text-center">
-            <a href="#!" class="dark-link">
+          <div className="text-center">
+            <a href="#!" className="dark-link">
               Load more activity
             </a>
           </div>

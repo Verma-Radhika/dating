@@ -1,5 +1,5 @@
-import React from "react";
-import { Route, Routes } from "react-router-dom";
+import React, { useEffect } from "react";
+import { Route, Routes, useNavigate } from "react-router-dom";
 import About from "../pages/About";
 import { MeetNewFnd } from "../pages/MeetNewFnd/MeetNewFnd";
 import { Suggestions } from "../pages/Suggetions.js/Suggestions";
@@ -18,11 +18,25 @@ import { Register } from "../pages/Register/Register";
 import { ExtraPage } from "../pages/ExtraPage/ExtraPage";
 export const AllRoute = () => {
 
-  var token = JSON.parse(localStorage.getItem("token"))
-  console.log("token" ,token)
+  // var token = JSON.parse(localStorage.getItem("token"))
+  // console.log("token" ,token)
+
+
+  let navigate = useNavigate();  
+    let getData = async () => {
+      let token = localStorage.getItem("token");
+      if (!token) {
+        navigate("/login");
+      }
+    };
+   
+    useEffect(() => {
+      getData();
+    }, []);
+
+
   return (
     <>
-  {/* {token ? */}
     <Routes>
       <Route path="/" element={<MeetNewFnd />} />
       {/* ............................My Pages............................ */}
@@ -39,15 +53,11 @@ export const AllRoute = () => {
       <Route path="/likes" element={<LikesPage />} />
       <Route path="/settings" element={<Setting/>}/>
       <Route path="/watchVideo" element={<WatchVideo/>}/>
-      {/* <Route path="/login" element={<Login/>}/>
-      <Route path="/register" element={<Register/>}/> */}
-
+      <Route path="/login" element={<Login/>}/>
+      <Route path="/register" element={<Register/>}/>
       {/* .......................................................... */}
       <Route path="/about" element={<About />} />
     </Routes>
-{/* :
-<Register/>
-} */}
     </>
   );
 };

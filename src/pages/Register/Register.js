@@ -49,8 +49,8 @@ export const Register = () => {
     <div>
       <section className="login_section">
         <div className={active ? "container" : "active"}>
-          <div class="user signinBx">
-            <div class="formBx">
+          <div className="user signinBx">
+            <div className="formBx">
               <form
                 onSubmit={(e) => {
                   handleSubmit(e);
@@ -104,13 +104,13 @@ export const Register = () => {
                   onChange={handleUserValue}
                 />
                 <input type="submit" name="" value="Sign Up" />
-                <p class="signup">
+                <p className="signup">
                   Already have an account ?<Link to="/login">Sign in.</Link>
                 </p>
                 !
               </form>
             </div>
-            <div class="imgBx">
+            <div className="imgBx">
               <img
                 src="https://raw.githubusercontent.com/WoojinFive/CSS_Playground/master/Responsive%20Login%20and%20Registration%20Form/img2.jpg"
                 alt="error"

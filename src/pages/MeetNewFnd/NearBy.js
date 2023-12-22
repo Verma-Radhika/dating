@@ -44,13 +44,13 @@ export const NearBy = ({ data, setSearchData }) => {
   return (
     <div className="container">
       <form>
-        <div class="form-row  justify-content-lg-around mt-3 ">
-          <div class=" form-group col-md-6 ">
+        <div className="form-row  justify-content-lg-around mt-3 ">
+          <div className=" form-group col-md-6 ">
             <h6>People nearby</h6>
           </div>
-          <div class="form-group col-md-2">
+          <div className="form-group col-md-2">
             <select
-              class="custom-select mr-sm-2"
+              className="custom-select mr-sm-2"
               id="inlineFormCustomSelectPref"
               value={gender}
               name="gender"
@@ -64,7 +64,7 @@ export const NearBy = ({ data, setSearchData }) => {
           </div>
         </div>
       </form>
-      <div class="custom-control custom-switch text-md-right text-sm-left">
+      <div className="custom-control custom-switch text-md-right text-sm-left">
         <FormControlLabel
           required
           control={
@@ -75,7 +75,7 @@ export const NearBy = ({ data, setSearchData }) => {
           />
           }
           label={
-            <span class="text-size  text-sm-left" style={{ fontSize: ".9rem" }}>
+            <span className="text-size  text-sm-left" style={{ fontSize: ".9rem" }}>
               NEAR MY AGE
             </span>
           }

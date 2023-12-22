@@ -26,12 +26,12 @@ export const Profile = () => {
   }, [id]);
   
   return (
-    <div class="container mt-1">
-      <div id="content" class="content p-0">
-        <div class="profile-header">
-          <div class="profile-header-cover"> </div>
-          <div class="profile-header-content">
-            <div class="profile-header-img">
+    <div className="container mt-1">
+      <div id="content" className="content p-0">
+        <div className="profile-header">
+          <div className="profile-header-cover"> </div>
+          <div className="profile-header-content">
+            <div className="profile-header-img">
               <img
                 src={`${item?.image}`}
                 alt=""
@@ -39,9 +39,9 @@ export const Profile = () => {
               />
               <AddAPhotoOutlinedIcon/>
             </div>
-            <div class="profile-header-info col-6">
-              <h4 class="m-t-sm">{ item?.name}</h4>
-              <p class="m-b-sm">UXUI + Frontend Developer</p>
+            <div className="profile-header-info col-6">
+              <h4 className="m-t-sm">{ item?.name}</h4>
+              <p className="m-b-sm">UXUI + Frontend Developer</p>
               <div className="" style={{display:"flex"}}>
               <p>0</p>
                 <p style={{marginLeft:"80px"}}>0</p>
@@ -55,8 +55,8 @@ export const Profile = () => {
               
             </div>
           </div>
-          <ul class="profile-header-tab nav nav-tabs">
-            <li class="nav-item">
+          <ul className="profile-header-tab nav nav-tabs">
+            <li className="nav-item">
               <a
                 class={`nav-link_ ${proValue == 1 ? "active show" : ""}`}
                 onClick={() => setProValue(1)}
@@ -64,7 +64,7 @@ export const Profile = () => {
                 POSTS
               </a>
             </li>
-            <li class="nav-item">
+            <li className="nav-item">
               <a
                 class={`nav-link_ ${proValue == 2 ? "active show" : ""}`}
                 onClick={() => setProValue(2)}
@@ -72,7 +72,7 @@ export const Profile = () => {
                 ABOUT
               </a>
             </li>
-            <li class="nav-item">
+            <li className="nav-item">
               <a
                 class={`nav-link_ ${proValue == 3 ? "active show" : ""}`}
                 onClick={() => setProValue(3)}
@@ -80,7 +80,7 @@ export const Profile = () => {
                 PHOTOS
               </a>
             </li>
-            <li class="nav-item">
+            <li className="nav-item">
               <a
                 class={`nav-link_ ${proValue == 4 ? "active show" : ""}`}
                 onClick={() => setProValue(4)}
@@ -88,7 +88,7 @@ export const Profile = () => {
                 VIDEOS
               </a>
             </li>
-            <li class="nav-item">
+            <li className="nav-item">
               <a
                 class={`nav-link_ ${proValue == 5 ? "active show" : ""}`}
                 onClick={() => setProValue(5)}
@@ -98,7 +98,7 @@ export const Profile = () => {
             </li>
           </ul>
         </div>
-        <div class="profile-container">
+        <div className="profile-container">
           {proValue == 1 ? (
             <Post />
           ) : proValue == 2 ? (

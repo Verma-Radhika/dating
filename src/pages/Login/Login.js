@@ -27,11 +27,12 @@ export const Login = () => {
         "Content-Type": "application/json",
       },
       body: JSON.stringify(userValue),
-    }).then((res)=>res.json())
+    })
+      .then((res) => res.json())
       .then((data) => {
-        console.log("data", data);
+        console.log("data", data.token);
         if (data.success === true) {
-localStorage.setItem("token", JSON.stringify(data))
+          localStorage.setItem("token", JSON.stringify(data.token));
           alert("login successfully!! ");
           navigator("/");
         } else {
@@ -42,22 +43,19 @@ localStorage.setItem("token", JSON.stringify(data))
       .catch((error) => console.log("error", error));
   };
 
-
-
-
   return (
     <div>
       <section className="login_section">
         <div className={active ? "container" : "active"}>
-          <div class="user signinBx">
-            <div class="imgBx">
+          <div className="user signinBx">
+            <div className="imgBx">
               <img
                 src="https://raw.githubusercontent.com/WoojinFive/CSS_Playground/master/Responsive%20Login%20and%20Registration%20Form/img1.jpg"
                 alt=""
                 onClick={() => console.log("image clicked")}
               />
             </div>
-            <div class="formBx">
+            <div className="formBx">
               <form
                 onSubmit={(e) => {
                   handleSubmitLogin(e);
@@ -78,7 +76,7 @@ localStorage.setItem("token", JSON.stringify(data))
                   placeholder="Password"
                 />
                 <input type="submit" name="" value="Login" />
-                <p class="signup">
+                <p className="signup">
                   Don't have an account ?<Link to="/register">Sign Up.</Link>
                 </p>
               </form>

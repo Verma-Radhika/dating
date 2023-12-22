@@ -3,8 +3,8 @@ import React from 'react'
 export const SwiperDEmo = () => {
   return (
     <body>
-      <div class="demo-nav">
-        <button class="active" data-url="demo-tinder.html">
+      <div className="demo-nav">
+        <button className="active" data-url="demo-tinder.html">
           Tinder
         </button>
         <button data-url="demo-recommendations.html">Recommendations</button>

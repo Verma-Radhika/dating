@@ -10,7 +10,7 @@ import { Register } from "./pages/Register/Register";
 // import ExtraFileNav from "./components/Navbar/ExtraFileNav";
 export const apiUrl = "http://localhost:4000/api/v1/users";
 const App = () => {
-  // const [counter, setCounter] = useState(0);
+  const [counter, setCounter] = useState(0);
   // const timer = 1000;
   // const CounterFunction = () => {
   //   setCounter((prev) => prev + 1);
@@ -23,54 +23,59 @@ const App = () => {
   //   return ()=> clearInterval(func)
   // },);
 
-  
-  var token = JSON.parse(localStorage.getItem("token"))
-  console.log("token" ,token)
+  // var token = JSON.parse(localStorage.getItem("token"));
+  // console.log("token", token);
 
+  // if(token === "undefined" ||  token == null  || token == "" ){
+  //   navigator("/")
+  // }
+
+  const route = window.location.href.split("/")[3];
+  // console.log("route", route, window.location);
   return (
     <>
-
-    {token ?  <>
-      <Navbar />
-      <div className="appContainer">
-        <div>
-          <Sidebar />
-        </div>
-        <div>
-          <div
-            class="card"
-            style={{
-              width: "100%",
-              height: "100px",
-              marginTop: "10px",
-            }}
-          >
-            <img
-              src="https://www.themediaant.com/blog/wp-content/uploads/2021/07/text-advertising-business-web-icons-behind-torn-white-paper-text-advertising-behind-torn-white-paper-132063555.jpg"
-              width={"100%"}
-              height="100%"
-            />
+      {route != "register" && route != "login" && <Navbar />}
+      <div
+        className={route != "register" && route != "login" && "appContainer"}
+      >
+        {route != "register" && route != "login" && (
+          <div>
+            <Sidebar />
           </div>
-          <div
-            class="card"
-            style={{
-              marginTop: "10px",
-            }}
-          >
-            <div class="card-body">
-              Oops, you dont have a profile photo! If you want to become more
-              popular and make more friends, upload your photo now!
-            </div>
-          </div>
+        )}
+        <div>
+          {route != "register" && route != "login" && (
+            <>
+              <div
+                className="card"
+                style={{
+                  width: "100%",
+                  height: "100px",
+                  marginTop: "10px",
+                }}
+              >
+                <img
+                  src="https://www.themediaant.com/blog/wp-content/uploads/2021/07/text-advertising-business-web-icons-behind-torn-white-paper-text-advertising-behind-torn-white-paper-132063555.jpg"
+                  width={"100%"}
+                  height="100%"
+                />
+              </div>
+              <div
+                className="card"
+                style={{
+                  marginTop: "10px",
+                }}
+              >
+                <div className="card-body">
+                  Oops, you dont have a profile photo! If you want to become
+                  more popular and make more friends, upload your photo now!
+                </div>
+              </div>
+            </>
+          )}
           <AllRoute />
         </div>
       </div>
-    </> :  
-    <Routes>
-      <Route path="/" element={<Login/>}/>
-      <Route path="/register" element={<Register/>}/>
-    </Routes>
-    }
     </>
   );
 };

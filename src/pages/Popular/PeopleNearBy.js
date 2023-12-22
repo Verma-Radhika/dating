@@ -10,15 +10,15 @@ export const PeopleNearBy = () => {
   return (
     <div className="container">
       <form>
-        <div class="form-row  justify-content-lg-around mt-3 ">
-          <div class=" form-group col-md-6 ">
+        <div className="form-row  justify-content-lg-around mt-3 ">
+          <div className=" form-group col-md-6 ">
             {/* <h6>People nearby</h6> */}
             <FormControlLabel
               required
               control={<Switch />}
               label={
                 <span
-                  class="text-size  text-sm-left"
+                  className="text-size  text-sm-left"
                   style={{ fontSize: ".8rem" }}
                 >
                   NEAR MY AGE
@@ -26,9 +26,9 @@ export const PeopleNearBy = () => {
               }
             />
           </div>
-          <div class="form-group col-md-2">
+          <div className="form-group col-md-2">
             <select
-              class="custom-select mr-sm-2"
+              className="custom-select mr-sm-2"
               id="inlineFormCustomSelectPref"
             >
               <option selected>Choose...</option>

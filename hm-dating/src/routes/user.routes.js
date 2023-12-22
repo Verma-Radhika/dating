@@ -10,7 +10,6 @@ import { upload } from "../middlewares/multer.middleware.js";
 import { isAuthenticatedUser, authorizeRoles } from "../middlewares/auth.js";
 
 const router = Router();
-
 router.route("/register").post(
   upload.fields([
     {

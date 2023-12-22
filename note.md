@@ -57,3 +57,11 @@ there are three option ? again login ? or may be see profile
 
 
   <!-- https://mdbootstrap.com/docs/standard/navigation/navbar/ -->
+
+
+
+  question 
+  1- fetch data  at one time  - need in different pages [ name, or other things]
+  2- user details api ni h  [by token ?]
+  3- logout pr api bhi h or mene localsorage use kiya h
+  4- 

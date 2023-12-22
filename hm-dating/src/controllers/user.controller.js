@@ -1,5 +1,3 @@
-
-
 import { User } from "../models/user.model.js";
 import asyncErrorHandler from "../utils/asyncErrorHandler.js";
 import { sendToken } from "../utils/sendToken.js";
@@ -8,8 +6,8 @@ import crypto from "crypto";
 
 // Register User
 export const registerUser = asyncErrorHandler(async (req, res, next) => {
-  console.log("body",req.body)
-    const { fullName, email, userName, gender, password, location } = req.body;
+  console.log("body", req.body);
+  const { fullName, email, userName, gender, password, location } = req.body;
   if (
     [fullName, email, userName, gender, password, location].some(
       (field) => field?.trim() === ""
@@ -38,7 +36,8 @@ export const registerUser = asyncErrorHandler(async (req, res, next) => {
   if (!user) {
     return next(
       new ErrorHandler("Something went wrong while registering the user", 500)
-    )};
+    );
+  }
 
   sendToken(user, 201, res);
 });
@@ -82,14 +81,15 @@ export const logoutUser = asyncErrorHandler(async (req, res, next) => {
 // // Get User Details
 export const getUserDetails = asyncErrorHandler(async (req, res, next) => {
   const user = await User.findById(req.user.id);
-
   res.status(200).json({
     success: true,
     user,
   });
 });
 
+// console.log("xcvbnm,")
 export const updateProfile = asyncErrorHandler(async (req, res, next) => {
+  // console.log("ddfd");
   const newUserData = {
     name: req.body.name,
     email: req.body.email,
@@ -124,14 +124,13 @@ export const updateProfile = asyncErrorHandler(async (req, res, next) => {
   });
 });
 
-// get all user 
+// get all user
 
 export const getAllUsers = asyncErrorHandler(async (req, res, next) => {
+  const users = await User.find();
 
-    const users = await User.find();
-
-    res.status(200).json({
-        success: true,
-        users,
-    });
+  res.status(200).json({
+    success: true,
+    users,
+  });
 });

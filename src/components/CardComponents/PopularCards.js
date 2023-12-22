@@ -4,26 +4,26 @@ export const PopularCards = ({ data }) => {
   const [counter, setCounter] = useState(0);
 
   return (
-    <div class="container cardContainer py-5">
-      <div class="row pb-5 mb-4">
+    <div className="container cardContainer py-5">
+      <div className="row pb-5 mb-4">
         {data?.map((el) => (
-          <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+          <div className="col-lg-3 col-md-6 mb-4 mb-lg-0">
             <div
-              class="card shadow-sm border  border-1 rounded-0"
+              className="card shadow-sm border  border-1 rounded-0"
               style={{ marginTop: "20px" }}
             >
-              <div class="card-body p-0">
+              <div className="card-body p-0">
                 <img
                   // src="https://bootstrapious.com/i/snippets/sn-cards/profile-1_dewapk.jpg"
                   src={el.image}
                   alt=""
-                  class="w-100 card-img-top"
+                  className="w-100 card-img-top"
                 />
-                <div class="p-2" style={{ borderTop: "1px solid #e5e5e5" }}>
-                  {/* <h5 class="mb-0">{el.name}</h5> */}
-                  <p class="small ">{el.name}</p>
+                <div className="p-2" style={{ borderTop: "1px solid #e5e5e5" }}>
+                  {/* <h5 className="mb-0">{el.name}</h5> */}
+                  <p className="small ">{el.name}</p>
                   <ul
-                    class="social mb-0 list-inline mt-3"
+                    className="social mb-0 list-inline mt-3"
                     style={{
                       display: "flex",
                       flexDirection: "row",
@@ -31,26 +31,26 @@ export const PopularCards = ({ data }) => {
                     }}
                   >
                     <li
-                      class="list-inline-item m-0 "
+                      className="list-inline-item m-0 "
                       style={{ display: "flex", flexDirection: "row" }}
                     >
                       <a
                         
-                        class="social-link "
+                        className="social-link "
                         onClick={() => setCounter((prev) => prev + 1)}
                       >
-                        <i class="fa fa-heart"></i>
+                        <i className="fa fa-heart"></i>
                       </a>
                       <p>{counter}</p>
                     </li>
                     <li
-                      class="list-inline-item m-0"
+                      className="list-inline-item m-0"
                       style={{ display: "flex", flexDirection: "row" }}
                     >
-                      <a href="#" class="social-link">
-                        {/* <i class="fa-sharp fa-messages"></i> */}
-                        <i class="fa fa-ellipsis-vertical"></i>
-                        {/* <i class="fa-sharp fa-solid fa-messages"></i> */}
+                      <a href="#" className="social-link">
+                        {/* <i className="fa-sharp fa-messages"></i> */}
+                        <i className="fa fa-ellipsis-vertical"></i>
+                        {/* <i className="fa-sharp fa-solid fa-messages"></i> */}
                       </a>
                     </li>
                   </ul>

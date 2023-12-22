@@ -8,244 +8,244 @@ export const Messages = () => {
     console.log("f djffg ");
   };
   return (
-    <div class="container">
-      {/* <div class="page-title">
-        <div class="row gutters">
-          <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
-            <h5 class="title">Chat App</h5>
+    <div className="container">
+      {/* <div className="page-title">
+        <div className="row gutters">
+          <div className="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
+            <h5 className="title">Chat App</h5>
           </div>
-          <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12"> </div>
+          <div className="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12"> </div>
         </div>
       </div> */}
 
-      <div class="content-wrapper">
-        <div class="row gutters">
-          <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-            <div class="card m-0">
-              <div class="row no-gutters">
-                <div class="col-xl-4 col-lg-4 col-md-4 col-sm-3 col-3">
-                  <div class="users-container">
-                    <div class="chat-search-box">
-                      <div class="input-group">
-                        <input class="form-control" placeholder="Search" />
-                        <div class="input-group-btn">
-                          <button type="button" class="btn btn-info">
-                            <i class="fa fa-search"></i>
+      <div className="content-wrapper">
+        <div className="row gutters">
+          <div className="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+            <div className="card m-0">
+              <div className="row no-gutters">
+                <div className="col-xl-4 col-lg-4 col-md-4 col-sm-3 col-3">
+                  <div className="users-container">
+                    <div className="chat-search-box">
+                      <div className="input-group">
+                        <input className="form-control" placeholder="Search" />
+                        <div className="input-group-btn">
+                          <button type="button" className="btn btn-info">
+                            <i className="fa fa-search"></i>
                           </button>
                         </div>
                       </div>
                     </div>
-                    <ul class="users">
-                      <li class="person" data-chat="person1">
-                        <div class="user">
+                    <ul className="users">
+                      <li className="person" data-chat="person1">
+                        <div className="user">
                           <img
                             src="https://www.bootdey.com/img/Content/avatar/avatar3.png"
                             alt="Retail Admin"
                           />
-                          <span class="status busy"></span>
+                          <span className="status busy"></span>
                         </div>
-                        <p class="name-time">
-                          <span class="name">Steve Bangalter</span>
-                          <span class="time">15/02/2019</span>
+                        <p className="name-time">
+                          <span className="name">Steve Bangalter</span>
+                          <span className="time">15/02/2019</span>
                         </p>
                       </li>
-                      <li class="person" data-chat="person1">
-                        <div class="user">
+                      <li className="person" data-chat="person1">
+                        <div className="user">
                           <img
                             src="https://www.bootdey.com/img/Content/avatar/avatar1.png"
                             alt="Retail Admin"
                           />
-                          <span class="status offline"></span>
+                          <span className="status offline"></span>
                         </div>
-                        <p class="name-time">
-                          <span class="name">Steve Bangalter</span>
-                          <span class="time">15/02/2019</span>
+                        <p className="name-time">
+                          <span className="name">Steve Bangalter</span>
+                          <span className="time">15/02/2019</span>
                         </p>
                       </li>
-                      <li class="person active-user" data-chat="person2">
-                        <div class="user">
+                      <li className="person active-user" data-chat="person2">
+                        <div className="user">
                           <img
                             src="https://www.bootdey.com/img/Content/avatar/avatar2.png"
                             alt="Retail Admin"
                           />
-                          <span class="status away"></span>
+                          <span className="status away"></span>
                         </div>
-                        <p class="name-time">
-                          <span class="name">Peter Gregor</span>
-                          <span class="time">12/02/2019</span>
+                        <p className="name-time">
+                          <span className="name">Peter Gregor</span>
+                          <span className="time">12/02/2019</span>
                         </p>
                       </li>
-                      <li class="person" data-chat="person3">
-                        <div class="user">
+                      <li className="person" data-chat="person3">
+                        <div className="user">
                           <img
                             src="https://www.bootdey.com/img/Content/avatar/avatar3.png"
                             alt="Retail Admin"
                           />
-                          <span class="status busy"></span>
+                          <span className="status busy"></span>
                         </div>
-                        <p class="name-time">
-                          <span class="name">Jessica Larson</span>
-                          <span class="time">11/02/2019</span>
+                        <p className="name-time">
+                          <span className="name">Jessica Larson</span>
+                          <span className="time">11/02/2019</span>
                         </p>
                       </li>
-                      <li class="person" data-chat="person4">
-                        <div class="user">
+                      <li className="person" data-chat="person4">
+                        <div className="user">
                           <img
                             src="https://www.bootdey.com/img/Content/avatar/avatar4.png"
                             alt="Retail Admin"
                           />
-                          <span class="status offline"></span>
+                          <span className="status offline"></span>
                         </div>
-                        <p class="name-time">
-                          <span class="name">Lisa Guerrero</span>
-                          <span class="time">08/02/2019</span>
+                        <p className="name-time">
+                          <span className="name">Lisa Guerrero</span>
+                          <span className="time">08/02/2019</span>
                         </p>
                       </li>
-                      <li class="person" data-chat="person5">
-                        <div class="user">
+                      <li className="person" data-chat="person5">
+                        <div className="user">
                           <img
                              src="https://www.bootdey.com/img/Content/avatar/avatar5.png"
                             alt="Retail Admin"
                           />
-                          <span class="status away"></span>
+                          <span className="status away"></span>
                         </div>
-                        <p class="name-time">
-                          <span class="name">Michael Jordan</span>
-                          <span class="time">05/02/2019</span>
+                        <p className="name-time">
+                          <span className="name">Michael Jordan</span>
+                          <span className="time">05/02/2019</span>
                         </p>
                       </li>
                     </ul>
                   </div>
                 </div>
-                <div class="col-xl-8 col-lg-8 col-md-8 col-sm-9 col-9">
-                  <div class="selected-user">
+                <div className="col-xl-8 col-lg-8 col-md-8 col-sm-9 col-9">
+                  <div className="selected-user">
                     <span>
-                      To: <span class="name">Emily Russell</span>
+                      To: <span className="name">Emily Russell</span>
                     </span>
                   </div>
-                  <div class="chat-container">
-                    <ul class="chat-box chatContainerScroll">
-                      <li class="chat-left">
-                        <div class="chat-avatar">
+                  <div className="chat-container">
+                    <ul className="chat-box chatContainerScroll">
+                      <li className="chat-left">
+                        <div className="chat-avatar">
                           <img
                             src="https://www.bootdey.com/img/Content/avatar/avatar3.png"
                             alt="Retail Admin"
                           />
-                          <div class="chat-name">Russell</div>
+                          <div className="chat-name">Russell</div>
                         </div>
-                        <div class="chat-text">
+                        <div className="chat-text">
                           Hello, I'm Russell.
                           <br />
                           How can I help you today?
                         </div>
-                        <div class="chat-hour">
-                          08:55 <span class="fa fa-check-circle"></span>
+                        <div className="chat-hour">
+                          08:55 <span className="fa fa-check-circle"></span>
                         </div>
                       </li>
-                      <li class="chat-right">
-                        <div class="chat-hour">
-                          08:56 <span class="fa fa-check-circle"></span>
+                      <li className="chat-right">
+                        <div className="chat-hour">
+                          08:56 <span className="fa fa-check-circle"></span>
                         </div>
-                        <div class="chat-text">
+                        <div className="chat-text">
                           Hi, Russell
                           <br /> I need more information about Developer Plan.
                         </div>
-                        <div class="chat-avatar">
+                        <div className="chat-avatar">
                           <img
                             src="https://www.bootdey.com/img/Content/avatar/avatar3.png"
                             alt="Retail Admin"
                           />
-                          <div class="chat-name">Sam</div>
+                          <div className="chat-name">Sam</div>
                         </div>
                       </li>
-                      <li class="chat-left">
-                        <div class="chat-avatar">
+                      <li className="chat-left">
+                        <div className="chat-avatar">
                           <img
                             src="https://www.bootdey.com/img/Content/avatar/avatar3.png"
                             alt="Retail Admin"
                           />
-                          <div class="chat-name">Russell</div>
+                          <div className="chat-name">Russell</div>
                         </div>
-                        <div class="chat-text">
+                        <div className="chat-text">
                           Are we meeting today?
                           <br />
                           Project has been already finished and I have results
                           to show you.
                         </div>
-                        <div class="chat-hour">
-                          08:57 <span class="fa fa-check-circle"></span>
+                        <div className="chat-hour">
+                          08:57 <span className="fa fa-check-circle"></span>
                         </div>
                       </li>
-                      <li class="chat-right">
-                        <div class="chat-hour">
-                          08:59 <span class="fa fa-check-circle"></span>
+                      <li className="chat-right">
+                        <div className="chat-hour">
+                          08:59 <span className="fa fa-check-circle"></span>
                         </div>
-                        <div class="chat-text">
+                        <div className="chat-text">
                           Well I am not sure.
                           <br />I have results to show you.
                         </div>
-                        <div class="chat-avatar">
+                        <div className="chat-avatar">
                           <img
                             src="https://www.bootdey.com/img/Content/avatar/avatar5.png"
                             alt="Retail Admin"
                           />
-                          <div class="chat-name">Joyse</div>
+                          <div className="chat-name">Joyse</div>
                         </div>
                       </li>
-                      <li class="chat-left">
-                        <div class="chat-avatar">
+                      <li className="chat-left">
+                        <div className="chat-avatar">
                           <img
                             src="https://www.bootdey.com/img/Content/avatar/avatar3.png"
                             alt="Retail Admin"
                           />
-                          <div class="chat-name">Russell</div>
+                          <div className="chat-name">Russell</div>
                         </div>
-                        <div class="chat-text">
+                        <div className="chat-text">
                           The rest of the team is not here yet.
                           <br />
                           Maybe in an hour or so?
                         </div>
-                        <div class="chat-hour">
-                          08:57 <span class="fa fa-check-circle"></span>
+                        <div className="chat-hour">
+                          08:57 <span className="fa fa-check-circle"></span>
                         </div>
                       </li>
-                      <li class="chat-right">
-                        <div class="chat-hour">
-                          08:59 <span class="fa fa-check-circle"></span>
+                      <li className="chat-right">
+                        <div className="chat-hour">
+                          08:59 <span className="fa fa-check-circle"></span>
                         </div>
-                        <div class="chat-text">
+                        <div className="chat-text">
                           Have you faced any problems at the last phase of the
                           project?
                         </div>
-                        <div class="chat-avatar">
+                        <div className="chat-avatar">
                           <img
                             src="https://www.bootdey.com/img/Content/avatar/avatar4.png"
                             alt="Retail Admin"
                           />
-                          <div class="chat-name">Jin</div>
+                          <div className="chat-name">Jin</div>
                         </div>
                       </li>
-                      <li class="chat-left">
-                        <div class="chat-avatar">
+                      <li className="chat-left">
+                        <div className="chat-avatar">
                           <img
                             src="https://www.bootdey.com/img/Content/avatar/avatar3.png"
                             alt="Retail Admin"
                           />
-                          <div class="chat-name">Russell</div>
+                          <div className="chat-name">Russell</div>
                         </div>
-                        <div class="chat-text">
+                        <div className="chat-text">
                           Actually everything was fine.
                           <br />
                           I'm very excited to show this to our team.
                         </div>
-                        <div class="chat-hour">
-                          07:00 <span class="fa fa-check-circle"></span>
+                        <div className="chat-hour">
+                          07:00 <span className="fa fa-check-circle"></span>
                         </div>
                       </li>
                     </ul>
-                    <div class="form-group mt-3 mb-0">
+                    <div className="form-group mt-3 mb-0">
                       <textarea
-                        class="form-control"
+                        className="form-control"
                         rows="3"
                         placeholder="Type your message here..."
                       ></textarea>
