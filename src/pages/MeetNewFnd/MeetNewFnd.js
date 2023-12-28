@@ -28,6 +28,8 @@ export const MeetNewFnd = () => {
     // console.log("data")
   }, []);
   // console.log("dummy data", dummyData);
+
+  
   return (
     <>
       <div className="selactOptionContainer container-fluid fit-content">

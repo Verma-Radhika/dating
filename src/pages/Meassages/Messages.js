@@ -5,7 +5,6 @@ export const Messages = () => {
 
   const handleMenuClick = () => {
     setMenuToggled(!isMenuToggled);
-    console.log("f djffg ");
   };
   return (
     <div className="container">

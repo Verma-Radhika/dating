@@ -1,39 +1,52 @@
 import { Hidden } from "@mui/material";
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
-
+import "./mnf.css";
+import {
+  ImageModel,
+  ModalContent,
+} from "../../components/ImageModel/ImageModel";
 export const SearchPageData = ({ data }) => {
-  // console.log("data", data);
+  const [isEnlarged, setIsEnlarged] = useState(false);
+  const handleDoubleTap = () => {
+    setIsEnlarged(!isEnlarged);
+    console.log("asdfghj");
+  };
+
+  const handleSingleTap = () => {
+    setIsEnlarged(false);
+  };
+
   return (
     <div className="container cardContainer py-5">
       <div className="row pb-5 mb-4">
-        {data?.map((el,index) => (
-          
+        {data?.map((el, index) => (
           <div className="col-lg-3 col-md-6 mb-4 mb-lg-0 " key={index}>
             <div
               className="card shadow-sm border  border-1 rounded-0 h-10"
-              style={{ marginTop: "20px" , border:"1px solid red"}}
+              style={{ marginTop: "20px", border: "1px solid red" }}
             >
-               <Link to={`/profile/${el.id}`}>
-              <div className="card-body p-0">
-                <div style={{height:"35vh"}}>
-                <img 
-                  // src="https://bootstrapious.com/i/snippets/sn-cards/profile-1_dewapk.jpg"
-                  src={el.image}
-                  alt=""
-                  className="w-100 card-img-top"
-                  style={{height:"100%",width:"70%"}}
-                />
+              <Link to={`/profile/${el.id}`} className="link">
+                <div className="card-body p-0">
+                  <div style={{ height: "35vh" }}>
+                                       <img
+                      src={el.image}
+                      alt=""
+                      className="w-100 card-img-top"
+                      style={{ height: "100%", width: "70%" }}
+                    />
+                  </div>
+                  <div
+                    className="p-2"
+                    style={{ borderTop: "1px solid #e5e5e5" }}
+                  >
+                    <p className="name">{el.name.toUpperCase()}</p>
+                  </div>
                 </div>
-                <div className="p-2" style={{ borderTop: "1px solid #e5e5e5" }}>
-                  <p className="small ">{el.name}</p>
-                </div>
-              </div>
               </Link>
             </div>
           </div>
         ))}
-   
       </div>
     </div>
   );

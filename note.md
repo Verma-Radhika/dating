@@ -63,5 +63,14 @@ there are three option ? again login ? or may be see profile
   question 
   1- fetch data  at one time  - need in different pages [ name, or other things]
   2- user details api ni h  [by token ?]
-  3- logout pr api bhi h or mene localsorage use kiya h
+  3- logout pr api bhi h or mene localsorage use kiya h-> done
   4- 
+
+
+
+
+pending ...
+1- modal for image    
+ - error in page popular page -> madal take last image ..
+2- font style for all pages  
+3

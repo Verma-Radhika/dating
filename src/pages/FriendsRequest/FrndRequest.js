@@ -176,7 +176,6 @@ export const FrndRequest = () => {
                   <p>
                     <b>Brian Cumin</b> reacted to your post
                   </p>
-
                   <p className="text-muted">
                     <small>10 mins ago</small>
                   </p>
@@ -219,7 +218,6 @@ export const FrndRequest = () => {
                   <p>
                     <b>Parsley Montana</b> reacted to your post
                   </p>
-
                   <p className="text-muted">
                     <small>10 mins ago</small>
                   </p>

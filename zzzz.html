@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PDF Viewer</title>
+</head>
+<body>
+
+    <div id="showPdf"></div>
+
+    <script>
+        var func = (data) => {
+            const url = data;
+
+            const showPdf = document.getElementById("showPdf");
+            showPdf.innerHTML = "";
+
+            const iframe = document.createElement('iframe');
+            iframe.src = `https://docs.google.com/gview?url=${encodeURIComponent(url)}&embedded=true&rm=minimal`;
+            iframe.width = '100%';
+            iframe.height = '600px';
+            iframe.style.border = 'none';
+            showPdf.appendChild(iframe);
+        };
+
+        // Call the function with the provided PDF URL
+        func('https://myyearbook.s3.ap-south-1.amazonaws.com/9%27th/Economics/chapter1.pdf');
+    </script>
+
+</body>
+</html>

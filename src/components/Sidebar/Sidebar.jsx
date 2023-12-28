@@ -223,7 +223,7 @@ const Sidebar = ({ children }) => {
         <Box className="feedbackContainer">
           <Typography
             id="modal-modal-title"
-            variant="h5"
+            variant="h5" 
             component="h1"
             sx={{ paddingBottom: 1 }}
           >

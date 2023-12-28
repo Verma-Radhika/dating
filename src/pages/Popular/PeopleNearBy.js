@@ -7,6 +7,11 @@ export const PeopleNearBy = () => {
   const [inputValues , setInputValues] = useState({
     age: "",
   });
+
+
+
+
+  
   return (
     <div className="container">
       <form>

@@ -29,29 +29,29 @@ export const PopularHome = () => {
     <>
       <div className="selactOptionContainer container-fluid fit-content">
         <div className="selactOption">
-          <div
-            onClick={handleSearchPage}
-            className={nearbyPage ? "tabHide" : "tabActive"}
-          >
-            {" "}
-            People NearBy
-          </div>
+          
           <div
             onClick={handleNearByPage}
             className={searchPage ? "tabHide" : "tabActive"}
           >
             Popular
           </div>
+          <div
+            onClick={handleSearchPage}
+            className={nearbyPage ? "tabHide" : "tabActive"}
+          >
+            {" "}
+            Your Likes 
+          </div>
         </div>
         <div className="container">
           {searchPage ? <PeopleNearBy data={dummyData} setSearchData={setSearchData} /> : <Popular />}
         </div>
       </div>
-
+      
       {/* .............................show data......................... */}
 
       {searchPage ? <PopularCards data={searchData} /> : <PopularCards data={dummyData} />}
-     
     </>
   );
 };
